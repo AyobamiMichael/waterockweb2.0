@@ -1,0 +1,78 @@
+
+.editmain{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.editnavbar {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.editnavbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.editnavbar li {
+  margin-right: 20px;
+}
+
+.editnavbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+.editcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+}
+
+.editform1{
+    top: -5em;
+    position: relative;
+    width: 30em;
+}
+.editsavebtn{
+   top: -14em;
+   position: relative;
+   right: -30em;
+}
+.btn{
+    width: 23.5em;
+   
+}
+
+
+
+
+
+  @media (max-width: 480px) {
+ 
+    .editnavbar ul {
+      flex-direction: column;
+    }
+  
+    .editnavbar li {
+      margin-bottom: 10px;
+    }
+    .editsavebtn{
+        margin-left: -33em;
+    }
+    .productdetails{
+       width: 22em;
+    }
+    .editform1{
+       margin-left: 3em;
+    }
+  }
+  

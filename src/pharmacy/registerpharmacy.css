@@ -1,0 +1,50 @@
+.registerpharmacycontainer{
+    top: 6em;
+    position: relative;
+    width: 500px;
+    margin: 0;
+    display:inline-block;
+    left: 25em;
+}
+
+
+@media screen and (max-width: 768px)
+    {  
+       
+        
+        .registerpharmacyform{
+            position: fixed;
+            margin-left: -20em;
+            width: 80%;
+        }
+
+        .btnregisterpharmacy{
+            position: relative;
+            width: 10em;
+
+        }
+       
+    }
+
+
+
+
+
+
+@media screen and (max-width: 480px)
+    {
+        .registerpharmacyform{
+            position: relative;
+            margin-left: -20em;
+            width: 20em;
+        }
+       
+       .registerpharmacycontainer{
+           position: relative;
+           width: fit-content;
+           height: fit-content;
+       }
+    }
+
+
+

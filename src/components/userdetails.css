@@ -1,0 +1,77 @@
+.welcome{
+    position: relative;
+    left: 35em;
+}
+
+.numberofviews{
+    position: relative;
+    left: 35em;
+}
+
+.mobilenavbarforpharmacy{
+    display: none;
+    position: relative;
+    top: -10em;
+    font-size: large;
+ } 
+
+
+@media screen and (max-width: 768px)
+        {
+         
+         .welcome{
+             position: relative;
+             margin-left: -18em;
+             margin-top: 5em;
+         }
+         .numberofviews{
+            position: relative;
+            margin-left: -18em;
+        }
+       
+        .mobilenavbarforpharmacy{
+            display: none;
+            position: relative;
+            top: -10em;
+            font-size: large;
+         } 
+       
+      }
+
+
+
+
+
+
+@media screen and (max-width: 480px)
+        {
+              
+            .welcome{
+             position: relative;
+             margin-left: -25em;
+             margin-top: 10em;
+            
+         }
+         .numberofviews{
+            position: relative;
+            margin-left: -25em;
+         
+          
+        }
+        .mobilenavbarforpharmacy{
+            display: flex;
+            position: relative;
+            top: -14em;
+            font-size: large;
+            margin-left: 20%;
+         }
+         .pharmacyuser{
+            position: fixed;
+         } 
+      
+    
+       }
+
+
+
+

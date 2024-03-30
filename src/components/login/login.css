@@ -1,0 +1,69 @@
+.logincontainer{
+    top: 6em;
+    position: relative;
+    width: 500px;
+    margin: 0;
+    align-items: center;
+    display:inline-block;
+    left: 25em;
+    
+}
+
+
+@media screen and (max-width: 768px)
+        {
+    
+        .logincontainer{
+            position: relative;    
+        }
+        .loginform{
+            position: relative;
+            margin-left: 50%;
+            margin-top: 10em;
+            width: 20em;
+        }
+     
+       .btnsumbit{
+          position: relative;
+          width: 300px;
+          height: 3em;
+       }
+       .d-grid{
+             position: relative;
+             margin-left: -1em;
+       }
+       
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px)
+        {
+    
+        .logincontainer{
+            position: relative;    
+        }
+        .loginform{
+            position: relative;
+            margin-left: 70%;
+            margin-top: -25em;
+            width: 20em;
+        }
+     
+       .btnsumbit{
+          position: relative;
+          width: 300px;
+          height: 3em;
+       }
+       .d-grid{
+             position: relative;
+             margin-left: -1em;
+       }
+       
+}
+
+
+

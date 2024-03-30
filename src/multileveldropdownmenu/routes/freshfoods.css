@@ -1,0 +1,120 @@
+.grid-container {
+    position: relative;
+    bottom: -6em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 10px;
+    width: 60em;
+    left: 10em;
+    
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.277);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .freshfood-image{
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  
+  .add-to-cart-button{
+    background: blue;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+
+
+@media (max-width: 768px) {
+  .grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 10px;
+    margin-left: -15em;
+    margin-top: 10em;
+
+    overflow-x: hidden;
+
+    
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.277);
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+    width: 10em;
+    height: 10em;
+    overflow-x: hidden;
+    
+  }
+
+  .freshfood-image{
+    position: relative;
+    width: 10em;
+    height: 10em;
+    overflow-x: hidden;
+    
+  }
+  
+  
+  .add-to-cart-button{
+    background: blue;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: -2em;
+  }  
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    margin-left: -10em;
+    top: 15em;
+   
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.277);
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+  
+  }
+  
+
+  .freshfood-image{
+    width: 100px;
+    height: 100px;
+     top: -0.01em;
+    position: relative;
+  }
+ 
+  .add-to-cart-button{
+    position: relative;
+    background: blue;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: -1.5em;
+  }
+ 
+}

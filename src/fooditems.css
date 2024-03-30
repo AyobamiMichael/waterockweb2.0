@@ -1,0 +1,19 @@
+
+.fooditemsfooter{
+    position: relative;
+    top: 20em;
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    .mainfooditems {
+    
+      padding: 10px; 
+    }
+    
+    
+  }
+
+  

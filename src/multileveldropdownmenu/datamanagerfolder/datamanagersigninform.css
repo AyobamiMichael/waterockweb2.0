@@ -1,0 +1,35 @@
+.logincontainer{
+    left: -1.5em;
+    position: relative;
+    top: 1em;
+}
+
+
+@media (max-width: 480px) {
+    .main{
+       position: fixed;
+ 
+    }
+
+    .logincontainer{
+      position: relative;
+      width: 10em;
+      position: relative;
+      margin-top: 30em;
+      margin-left: -3em;
+ 
+    }
+    .usernamesignin{
+      width: 22em;
+      margin-left: -3em;
+    }
+    .passwordsignin{
+      width: 22em;
+      margin-left: -3em;
+       
+    }
+    .submitsignin{
+      margin-left: -3em;
+    }
+   
+ }
