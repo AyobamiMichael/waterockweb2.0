@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import ProductDashboard from '../dashboard/productsdashboard'
 //import DashboardNavbar from '../dashboard/dashboardnavbar';
 //import { Switch } from '@mui/material';
+import BarsAndResturantsNavBar from './barnavbar';
 
 
 
@@ -366,8 +367,12 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
  
   return (
     <div className='main'>
+      <BarsAndResturantsNavBar/>
+      
+     
     <div className="container form-container">
     <form onSubmit={handleSubmit}>
+
       <div className="form-group">
         <input
           type="text"

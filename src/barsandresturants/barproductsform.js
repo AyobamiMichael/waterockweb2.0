@@ -5,11 +5,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import ProductDashboard from '../dashboard/productsdashboard'
 //import DashboardNavbar from '../dashboard/dashboardnavbar';
 //import { Switch } from '@mui/material';
-import BarsAndResturantsNavBar from './barsandresturantsdashboard';
+import BarsAndResturantsNavBar from './barnavbar';
 
 
 
-function AddBarProductsForm() {
+const AddBarProductsForm = () => {
 
    // Shoppingmall manager username to attached to the products and shop details 
    const [shoppingMallManagerUserName, setUsername] = useState('');
@@ -366,8 +366,8 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
   
  
   return (
-   
     <div className='main'>
+      <div><BarsAndResturantsNavBar/></div>
      
     <div className="container form-container">
    

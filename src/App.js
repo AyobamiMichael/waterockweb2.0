@@ -48,8 +48,9 @@ import Mobiledisplayofalcoholicdetailspage from './multileveldropdownmenu/mobile
 import Mobiledisplayofhouseholdgoodsdetailspage from './multileveldropdownmenu/mobiledisplayofhouseholdgoodsdetailpage';
 import SignUpBarManager from './barsandresturants/signupbarmanager';
 import SignInBarManager from './barsandresturants/signinbarmanager';
-import BarsAndResturantsNavBar from './barsandresturants/barsandresturantsdashboard';
 import AddBarProductsForm from './barsandresturants/barproductsform';
+import BarsAndResturantsDashBoard from './barsandresturants/barsandresturantsdashboard';
+import AddBarsForm from './barsandresturants/addbarsform';
 
  // IMPLEMENT ALL ROUTES HERE
 
@@ -96,8 +97,9 @@ function App(){
          <Route exact path='/registerproduct' element={<RegisterProduct/>}/>
          <Route exact path='/signupbarmanager' element={<SignUpBarManager/>}/>
          <Route exact path='/signinbarmanager' element={<SignInBarManager/>}/>
-         <Route exact path='/barsandresturantsnavbar' element={<BarsAndResturantsNavBar/>}/>
+         <Route exact path='/barsandresturantsdashboard' element={<BarsAndResturantsDashBoard/>}/>
          <Route exact path='/addbarproductsform' element={<AddBarProductsForm/>}/>
+         <Route exact path='/addbarform' element={<AddBarsForm/>}/>
          
          
         

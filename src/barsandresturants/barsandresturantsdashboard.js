@@ -1,33 +1,19 @@
 import React from 'react';
 import './barsandresturantsdashboard.css';
-import AddBarsForm from './addbarsform';
+import BarsAndResturantsNavBar from './barnavbar';
 
-const BarsAndResturantsNavBar = () => {
+const BarsAndResturantsDashBoard = () => {
   return (
-    <div className='barandresturant'>
-  
-    <nav className="navbar">
-      <ul className="navbar-menu">
-        <li className="navbar-item">View</li>
-        <li className="navbar-item">
-            <a href='/signinbarmanager'>
-            Sign Out
-            </a>
-            </li>
-            <li className="navbar-item"><a href='/addbarproductsform'>
-            Add Product
-            </a></li>
-      </ul>
-    </nav>
-     <div className='addbarformcompo'>
-   
+    <div className='main'>
+       <BarsAndResturantsNavBar/>
+     <div className='barsandresturantlandingpage'>
+       <h1 className=''>Welcome: </h1>
+       <h1 className=''>Number of views</h1>
+       <h1 className=''>Advertise Here</h1>
      </div>
-  
-    
     </div>
   );
 };
 
-export default BarsAndResturantsNavBar;
+export default BarsAndResturantsDashBoard;
 
-//   {<AddBarsForm />}

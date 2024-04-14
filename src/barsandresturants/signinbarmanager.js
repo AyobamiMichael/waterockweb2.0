@@ -74,7 +74,7 @@ export default class SignInBarManager extends Component {
           window.localStorage.setItem("isLoggedIn", true);
           window.localStorage.setItem("username", this.state.uname);
           if(this.state.checkuname.uname === this.state.uname){
-            window.location.href = "/barsandresturantsnavbar";
+            window.location.href = "/barsandresturantsdashboard";
           }
           //  window.location.href = "./registerpharmacy";
           
