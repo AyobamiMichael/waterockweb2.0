@@ -14,10 +14,13 @@ const BarsAndResturantsNavBar = () => {
             Sign Out
             </a>
             </li>
+            <li className="navbar-item"><a href='/addbarproductsform'>
+            Add Product
+            </a></li>
       </ul>
     </nav>
      <div className='addbarformcompo'>
-     {<AddBarsForm />}
+   
      </div>
   
     
@@ -26,3 +29,5 @@ const BarsAndResturantsNavBar = () => {
 };
 
 export default BarsAndResturantsNavBar;
+
+//   {<AddBarsForm />}

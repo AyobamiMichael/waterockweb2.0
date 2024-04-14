@@ -432,6 +432,7 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
     </form>
  
   </div>
+  
   </div>
   );
 }

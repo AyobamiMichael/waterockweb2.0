@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 //import ProductDashboard from '../dashboard/productsdashboard'
 //import DashboardNavbar from '../dashboard/dashboardnavbar';
 //import { Switch } from '@mui/material';
+import BarsAndResturantsNavBar from './barsandresturantsdashboard';
 
 
 
@@ -365,8 +366,8 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
   
  
   return (
+   
     <div className='main'>
-     
      
     <div className="container form-container">
    
