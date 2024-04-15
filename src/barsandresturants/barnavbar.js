@@ -7,20 +7,21 @@ const BarsAndResturantsNavBar = () => {
     <div className='barandresturantnavbar'>
     <nav className="navbar">
       <ul className="navbar-menu">
-        <li className="navbar-item">
+        <li className="homenavbar-item">
         <a href='/barsandresturantsdashboard'>Home</a>
         </li>
-        <li className="navbar-item">
+        <li className="addbarnavbar-item"><a href='/addbarform'>
+            Add Bar
+            </a></li>
+            <li className="addproductnavbar-item"><a href='/addbarproductsform'>
+            Add Product
+            </a></li>
+        <li className="signoutnavbar-item">
             <a href='/signinbarmanager'>
             Sign Out
             </a>
             </li>
-            <li className="navbar-item"><a href='/addbarform'>
-            Add Bar
-            </a></li>
-            <li className="navbar-item"><a href='/addbarproductsform'>
-            Add Product
-            </a></li>
+          
       </ul>
     </nav> 
     </div>

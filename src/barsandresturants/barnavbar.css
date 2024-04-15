@@ -8,12 +8,38 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  
 }
 
+.homenavbar-item{
+    display: inline-block;
+    left: 0em;
+    position: relative;
+    top: 1em;
+}
+.addbarnavbar-item{
+  display: inline-block;
+  left: -15em;
+  position: relative;
+  top: 1em;
+
+}
+.addproductnavbar-item{
+  display: inline-block;
+  left: -30em;
+  position: relative;
+  top: 1em;
+}
+.signoutnavbar-item{
+
+  display: inline-block;
+  left: -45em;
+  position: relative;
+  top: 1em;
+}
 .navbar-item {
   display: inline-block;
-  margin-right: 20px;
-  color: #d31414;
+  margin-right: 0;
   cursor: pointer;
 }
 
@@ -25,11 +51,11 @@
 
 @media (max-width: 768px) {
  
-  .navbar-menu {
+  .barnavbar-menu {
     text-align: center;
   }
 
-  .navbar-item {
+  .barnavbar-item {
     display: block;
     margin: 10px 0;
   }
@@ -39,14 +65,14 @@
 @media only screen and (max-width: 480px) {
    
  
-  .navbar{
+  .barnavbar{
       position: relative;
       top: -0.5em;
       display: block;
       background-color: #333;
       
   }
-  .navbar-menu {
+  .barnavbar-menu {
     text-align: center;
     list-style-type: none;
     margin: 0;
@@ -54,7 +80,7 @@
     
   }
 
-  .navbar-item {
+  .barnavbar-item {
 
     position: relative;
     margin: 3px 0;
@@ -63,7 +89,7 @@
     cursor: pointer;
   }
 
-  .navbar-item:hover {
+  .barnavbar-item:hover {
     text-decoration: underline;
   }
   
@@ -72,14 +98,14 @@
 
 @media only screen and (min-width: 480px) {
 
-.navbar{
+.barnavbar{
   position: relative;
   top: -0.5em;
   display: block;
   background-color: #333;
   
 }
-.navbar-menu {
+.barnavbar-menu {
 text-align: center;
 list-style-type: none;
 margin: 0;
@@ -87,7 +113,7 @@ padding: 0;
 
 }
 
-.navbar-item {
+.barnavbar-item {
 
 position: relative;
 margin: 3px 0;
@@ -96,7 +122,7 @@ color: #fff;
 cursor: pointer;
 }
 
-.navbar-item:hover {
+.barnavbar-item:hover {
 text-decoration: underline;
 }
 
