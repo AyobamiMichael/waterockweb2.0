@@ -367,10 +367,8 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
  
   return (
     <div className='main'>
-      <div><BarsAndResturantsNavBar/></div>
-     
+      <div className='barproductnavbar'><BarsAndResturantsNavBar/></div>
     <div className="container form-container">
-   
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <input
@@ -425,14 +423,7 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
             {item}
           </option>)}
         </select>
-        <input
-          type="text"
-          className="form-control"
-          value={formData.textboxes[4]}
-          required='true'  
-          onChange={(e) => handleTextboxChange(e, 4)}
-          placeholder="Enter Product Name"   
-        />
+
         <label>Select Product Description:</label>
         <select
           className="form-control"
@@ -454,15 +445,6 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
           required='true' 
           placeholder="Price"    
         />
-        <label>Product Image:</label>
-        <input
-          type="file"
-          accept="image/*"
-          className="form-control-file"
-          required='true'  
-          onChange={handleImageChange}
-        />
-     
       </div>
       {/* Image Picker */}
       <div className="form-group">
@@ -474,18 +456,6 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
        
       </div>
     </form>
-    <div className='mobilenavbarregistershoppingmall'>
-      <li className='mobileViewProducts'>
-            <a href="/dashboardnavbar">
-              <i className="fas fa-plus"></i>View
-            </a>
-          </li>
-          <li>
-            <a href="/signinformforuser">
-              <i className="fas fa-sign-out-alt"></i> Sign Out
-            </a>
-          </li>
-      </div>
   </div>
   </div>
   );

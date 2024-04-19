@@ -367,7 +367,10 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
  
   return (
     <div className='main'>
+      <div className='addbarnavbar'>
       <BarsAndResturantsNavBar/>
+      </div>
+     
       
      
     <div className="container form-container">

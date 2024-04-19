@@ -77,7 +77,8 @@ export default class SignInBarManager extends Component {
             window.location.href = "/barsandresturantsdashboard";
           }
           //  window.location.href = "./registerpharmacy";
-          
+          //   /addbarform
+          // /barsandresturantsdashboard
          
         }else{
           alert("User not found");

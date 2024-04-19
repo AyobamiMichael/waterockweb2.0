@@ -1,4 +1,5 @@
 /* Default View */
+/* IT'S ALL HISTORY LET NOTHING WORRY YOU*/
 .navbar {
   background-color: #333;
   padding: 10px 20px;
@@ -19,21 +20,27 @@
 }
 .addbarnavbar-item{
   display: inline-block;
-  left: -15em;
+  left: 5em;
   position: relative;
   top: 1em;
 
 }
 .addproductnavbar-item{
   display: inline-block;
-  left: -30em;
+  left: 10em;
+  position: relative;
+  top: 1em;
+}
+.editnavbar-item{
+  display: inline-block;
+  left: 12em;
   position: relative;
   top: 1em;
 }
 .signoutnavbar-item{
 
   display: inline-block;
-  left: -45em;
+  left: 15em;
   position: relative;
   top: 1em;
 }
@@ -59,43 +66,117 @@
     display: block;
     margin: 10px 0;
   }
+
+  .homenavbar-item{
+    display: inline-block;
+    left: 0em;
+    position: relative;
+    top: 1em;
+}
+.addbarnavbar-item{
+  display: inline-block;
+  left: 1em;
+  position: relative;
+  top: 1em;
+
+}
+.addproductnavbar-item{
+  display: inline-block;
+  left: 2em;
+  position: relative;
+  top: 1em;
+}
+
+.editnavbar-item{
+  display: inline-block;
+  left: 2.3em;
+  position: relative;
+  top: 1em;
+}
+.signoutnavbar-item{
+
+  display: inline-block;
+  left: 3em;
+  position: relative;
+  top: 1em;
+}
 }
 
 /* ALLWAYS USE  DISPLAY BLOCK  FOR MOBILE 480PX ANDROID */
-@media only screen and (max-width: 480px) {
-   
- 
-  .barnavbar{
-      position: relative;
-      top: -0.5em;
-      display: block;
-      background-color: #333;
-      
+@media (max-width: 480px) {
+
+  .navbar {
+    background-color: #333;
+    padding: 5px 2px;
+    display: block;
+    margin-top: -6em;
+    margin-left: 0em;
+    left: 1.2em;
   }
-  .barnavbar-menu {
-    text-align: center;
+  
+  .navbar-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     
+    
+  }
+  .barandresturantnavbar{
+    position: relative;
+    display: block;
+     margin-top: 30em;
+     margin-left: -3em;
+  }
+
+  .barnavbar-menu {
+    text-align: center;
   }
 
   .barnavbar-item {
+    display: block;
+    margin: 2px 0;
+  }
 
+  .homenavbar-item{
+    display: inline-block;
+    left: 2em;
     position: relative;
-    margin: 3px 0;
-    top: 2em;
-    color: #fff;
-    cursor: pointer;
-  }
+    top: 1em;
+}
+.addbarnavbar-item{
+  display: inline-block;
+  left: 1.4em;
+  position: relative;
+  top: 1em;
 
-  .barnavbar-item:hover {
-    text-decoration: underline;
-  }
-  
- 
+}
+.addproductnavbar-item{
+  display: inline-block;
+  left: 0.5em;
+  position: relative;
+  top: 1em;
+}
+.editnavbar-item{
+  display: inline-block;
+  left: 0.3em;
+  position: relative;
+  top: 1em;
+}
+.signoutnavbar-item{
+
+  display: inline-block;
+  left: 1em;
+  position: relative;
+  top: 1em;
 }
 
+.navbar-item:hover {
+  text-decoration: underline;
+  
+}
+ 
+}
+/*
 @media only screen and (min-width: 480px) {
 
 .barnavbar{
@@ -127,3 +208,4 @@ text-decoration: underline;
 }
 
 }
+*/

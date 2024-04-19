@@ -25,7 +25,10 @@
  
   @media (max-width: 480px) {
  
-  
+    .addbarnavbar{
+       display: none;
+    }
+    
     .form-container {
       display: flex;
       flex-direction: column;
