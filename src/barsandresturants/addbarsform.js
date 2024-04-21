@@ -419,27 +419,16 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
       {/* Repeat the above block for other form elements */}
       {/* Dropdowns */}
       <div className="form-group">  
-        <label>Image 1:</label>
+        <label>Kindly upload a nice picture of your bar:</label>
         <input
           type="file"
           accept="image/*"
           className="form-control-file"
           required='true'  
           onChange={handleImageChange}
+          multiple
         />
       </div>
-      {/* Image Picker */}
-      <div className="form-group">
-      <label>Image 2:</label>
-        <input
-          type="file"
-          accept="image/*"
-          className="form-control-file"
-          required='true'  
-          onChange={handleImageChange}
-        />
-      </div>
-      {/* Submit Buttons */}
       <div className="form-group">
         <button type="submit" className="btn btn-primary registershopsubmit">Submit</button>
        
