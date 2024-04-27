@@ -72,7 +72,7 @@ export default class SignInBarManager extends Component {
           alert("login successful");
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("isLoggedIn", true);
-          window.localStorage.setItem("username", this.state.uname);
+          window.localStorage.setItem("barusername", this.state.uname);
           if(this.state.checkuname.uname === this.state.uname){
             window.location.href = "/barsandresturantsdashboard";
           }

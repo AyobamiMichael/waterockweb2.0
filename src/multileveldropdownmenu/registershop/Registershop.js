@@ -328,9 +328,10 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
     formData.append('productName', productName);
     formData.append('productDescription', productDescription);
     formData.append('shoppingMallManagerUserName',  shoppingMallManagerUserName);
-  
+   // http://localhost:4000/registerbars
+     // https://waterockapi.wegotam.com/registershop
     try {
-      const response = await fetch("https://waterockapi.wegotam.com/registershop", {
+      const response = await fetch("http://localhost:4000/registershop", {
         method: "POST",
         body: formData,
       });
