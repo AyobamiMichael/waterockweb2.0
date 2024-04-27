@@ -174,7 +174,7 @@ const AddBarsForm = () => {
         <BarsAndResturantsNavBar />
       </div>
       <div className="container form-container">
-        <form onSubmit={handleSubmit} enctype="multipart/form-data">
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="text"
