@@ -29,8 +29,6 @@ const AddBarsForm = () => {
   const [formData, setFormData] = useState({
     textboxes: ['', '', ''],
     dropdowns: [''],
-    //barImages: [],
- 
     selectedImage: null,
   });
 
@@ -119,13 +117,13 @@ const AddBarsForm = () => {
 
 
 
-    const formData = new FormData();
-    formData.append('barName', barName);
-    formData.append('barAddress', barAddress);
-    formData.append('barState', barState);
-    formData.append('barPhone', barPhone);
-    formData.append('barImage', barImage);
-    formData.append('barManagerUserName',barManagerUserName)
+    const formDataNew = new FormData();
+    formDataNew.append('barName', barName);
+    formDataNew.append('barAddress', barAddress);
+    formDataNew.append('barState', barState);
+    formDataNew.append('barPhone', barPhone);
+    formDataNew.append('barImage', barImage);
+    formDataNew.append('barManagerUserName',barManagerUserName);
 
     /*
     const requestBody = {
@@ -145,7 +143,7 @@ const AddBarsForm = () => {
     try {
       const response = await fetch("http://localhost:4000/registerbars", {
         method: "POST",
-        body: formData,
+        body: formDataNew,
       });
 
       const data = await response.json();
