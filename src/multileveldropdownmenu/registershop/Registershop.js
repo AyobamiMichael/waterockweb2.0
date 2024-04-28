@@ -337,7 +337,7 @@ else if(updatedDropdowns[index] === 'Consumer Electronics(Generator)'){
       });
   
       const data = await response.json();
-      console.log(data);
+      console.log(formData);
   
       if (data.status === "ok") {
         alert("Register successful");

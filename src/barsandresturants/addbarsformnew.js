@@ -1,49 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import './addbarsform.css';
 import 'bootstrap/dist/css/bootstrap.css';
-//import Navbar from '../../homepagenavbar/navbar';
-//import ProductDashboard from '../dashboard/productsdashboard'
-//import DashboardNavbar from '../dashboard/dashboardnavbar';
-//import { Switch } from '@mui/material';
 import BarsAndResturantsNavBar from './barnavbar';
 
 
 
-const AddBarsForm = () => {
-  const [barManagerUserName, setBarUsername] = useState('');
-  useEffect(() => {
-    const storedBarUsername = localStorage.getItem('barusername');
-    if (storedBarUsername) {
-      setBarUsername(storedBarUsername);
-    }
-  }, []);
-  console.log(barManagerUserName);
+function RegisterBarForm(){
+    const [barManagerUserName, setBarUsername] = useState('');
+    useEffect(() => {
+      const storedBarUsername = localStorage.getItem('barusername');
+      if (storedBarUsername) {
+        setBarUsername(storedBarUsername);
+      }
+    }, []);
+    console.log(barManagerUserName);
 
-  const listofstate = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Benue", "Bayelsa", "Borno",
+
+
+    const listofstate = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Benue", "Bayelsa", "Borno",
     "Cross River", "Delta", "Ebonyi", "Edo", "Enugu", "Ekiti", "Gombe", "Imo", "Kaduna",
     "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun",
     "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara", "FCT"
   ];
 
 
+
   const [formData, setFormData] = useState({
-    textboxes: ['', '', ''],
+    textboxes: ['', '', '',],
     dropdowns: [''],
     selectedImage: null,
   });
 
 
   const [barName, setBarName] = useState('');
-  const [barAddress, setBarAddress] = useState('');
-  const [barState, setBarState] = useState('');
-  const [barPhone, setBarPhone] = useState('');
-  const [barImage, setBarImageName] = useState('');
+ const [barAddress, setBarAddress] = useState('');
+ const [barState, setBarState] = useState('');
+ const [barPhone, setBarPhone] = useState('');
+ const [barImage, setBarImageName] = useState('');
  
 
-  const handleTextboxChange = (e, index) => {
+
+
+ const handleTextboxChange = (e, index) => {
     const updatedTextboxes = [...formData.textboxes];
     //console.log(updatedTextboxes);
     updatedTextboxes[index] = e.target.value;
+
+   
     setFormData({ ...formData, textboxes: updatedTextboxes });
 
    switch (index) {
@@ -61,77 +64,85 @@ const AddBarsForm = () => {
   }
   };
 
+
   const handleDropdownChange = (e, index) => {
     const updatedDropdowns = [...formData.dropdowns];
     updatedDropdowns[index] = e.target.value;
     setFormData({ ...formData, dropdowns: updatedDropdowns });
-    
+   
+  //  setCatItemSelected(updatedDropdowns[index]);
     switch(index){
        case 0:
         setBarState(updatedDropdowns[index])  
         break;
-        default:
-        break;
-    } 
+       default:
+              break;
+    }
+   // console.log(catSelected);
+     console.log( updatedDropdowns[index]);
+}
 
-  }
-
-  const handleImageChange = (e) => {
-   
-    const selectedImage = e.target.files[0];
+const handleImageChange = (e) => {
+    // const selectedImageBuffer = e.target.files[0]['size'];
+     const selectedImage = e.target.files[0];
+    // setFormData({ ...formData, selectedImage });
+   //  console.log(selectedImageBuffer/1000);
       console.log(selectedImage);
-      setBarImageName(selectedImage);
-
+  //   setProductImageBuffer(selectedImageBuffer);
+     setBarImageName(selectedImage);
  
    };
-   
-  const handleSubmit = async (e) => {
+
+
+   const handleSubmit = async (e) => {
     e.preventDefault();
+  
+    
+    const formData = new FormData();
+    formData.append('barName', barName);
+    formData.append('barAddress', barAddress);
+    formData.append('barState', barState);
+    formData.append('barPhone', barPhone);
+    formData.append('barImage', barImage);
+    formData.append('barManagerUserName',barManagerUserName);
 
-
-
-    const formDataNew = new FormData();
-    formDataNew.append('barName', barName);
-    formDataNew.append('barAddress', barAddress);
-    formDataNew.append('barState', barState);
-    formDataNew.append('barPhone', barPhone);
-    formDataNew.append('barImage', barImage);
-    formDataNew.append('barManagerUserName',barManagerUserName);
-      
-    console.log(formDataNew);
-
+    if(!/^0\d{10}$/.test(barPhone)){
+        alert('Invalid number');
+        return;      
+    }
+    
     try {
       const response = await fetch("http://localhost:4000/registerbars", {
         method: "POST",
-        body: formDataNew,
+        body: formData,
       });
-
+  
       const data = await response.json();
-      
       console.log(response);
+  
       if (data.status === "ok") {
-        alert("Registration successful");
+        alert("Register successful");
+
         setFormData({
           textboxes: ['', '', ''],
           dropdowns: [''],
           selectedImage: null,
         });
-         setBarName('');
-         setBarAddress('');
-         setBarPhone('');
-         setBarState('');
-         setBarImageName('');
+        setBarName('');
+        setBarAddress('');
+        setBarState('');
+        setBarPhone('');
+        setBarImageName('');
+        setBarUsername('');
+        
       } else {
-         alert(data.error);
-      
+        alert("Registration failed");
       }
     } catch (error) {
       console.error("Error:", error);
       alert("Registration failed");
     }
-    
   };
-
   return (
     <div className='main'>
       <div className='addbarnavbar'>
@@ -196,20 +207,7 @@ const AddBarsForm = () => {
       </div>
     </div>
   );
-};
-
-export default AddBarsForm;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+export default RegisterBarForm;
