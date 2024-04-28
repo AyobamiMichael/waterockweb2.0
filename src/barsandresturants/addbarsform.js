@@ -124,21 +124,22 @@ const AddBarsForm = () => {
     formDataNew.append('barPhone', barPhone);
     formDataNew.append('barImage', barImage);
     formDataNew.append('barManagerUserName',barManagerUserName);
-
+      
+    console.log(formDataNew);
     /*
     const requestBody = {
-      barName: formData.barName,
-      barAddress: formData.barAddress,
-      barPhone: formData.barPhone,
-      barState: formData.barState,
+      barName: formData.textboxes[0],
+      barAddress: formData.textboxes[1],
+      barPhone: formData.textboxes[2],
+      barState: formData.dropdowns[0],
       barManagerUserName: barManagerUserName,
-      barImages: formData.barImages
+      barImage: barImage
     
     };
-  
+     */
     
-    console.log("Request body:", requestBody);
-   */
+   // console.log("Request body:", requestBody);
+   
 
     try {
       const response = await fetch("http://localhost:4000/registerbars", {
