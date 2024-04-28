@@ -156,7 +156,11 @@ const AddBarsForm = () => {
           dropdowns: [''],
           selectedImage: null,
         });
-      
+         setBarName('');
+         setBarAddress('');
+         setBarPhone('');
+         setBarState('');
+         setBarImageName('');
       } else {
         alert(data.error);
       }
@@ -221,9 +225,7 @@ const AddBarsForm = () => {
           className="form-control-file"
           required='false'  
           onChange={handleImageChange}
-        
         />
-
           </div>
           
           <div className="form-group">
