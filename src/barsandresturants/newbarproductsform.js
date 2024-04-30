@@ -10,7 +10,7 @@ import axios from 'axios';
 
 
 
-const AddBarProductsForm = () => {
+const NewAddBarProductsForm = () => {
 
    // Barmanager username to attached to the products and details 
    const [barManagerUserName, setBarUsername] = useState('');
@@ -202,82 +202,4 @@ const AddBarProductsForm = () => {
   );
 }
 
-export default  AddBarProductsForm;
-
-
-
-
-
-
-/*
- * 
- * 
- *  {catSelected === 'Others' && <>
-        <input
-          type="text"
-          className="form-control"
-          value={formData.textboxes[1]}
-          onChange={(e) => handleTextboxChange(e, 1)}
-          required='true' 
-          placeholder="Enter Product Name"  
-        />
-            <div className="form-group">
-      <label>Image:</label>
-          <input
-          type="file"
-          accept="image/*"
-          className="form-control-file"  
-          onChange={handleImageChange}
-        />
-      </div>
-        </>
- * 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-  
-    const formData = new FormData();
-    formData.append('catSelected', catSelected);
-    formData.append('otherProductName', otherProductName);
-    formData.append('productPrice', productPrice);
-    formData.append('otherProductImage', otherProductImage);
-    formData.append('barManagerUserName',  barManagerUserName);
-   
-  
-    try {
-     // const response = await axios.post("http://localhost:4000/registerbarsproducts", formData);
-      const response = await fetch("http://localhost:4000/registerbarsproducts", {
-        method: "POST",
-        body: formData,
-      });
-  
-      const data = await response.json();
-      console.log(response);
-  
-      if (data.status === "ok") {
-        alert("Register successful");
-
-        setFormData({
-          textboxes: ['', ''],
-          dropdowns: [''],
-          selectedImage: null,
-        });
-        setCat('');
-        setProductPrice('');
-        setOtherProductName('');
-        setBarUsername('');
-        setOtherProductImageName('');
-       
-        
-      } else {
-         alert(data.error)
-        //alert("Registration failed");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("Registration failed");
-    }
-  };
- * 
- * 
- * 
- */
+export default  NewAddBarProductsForm;
