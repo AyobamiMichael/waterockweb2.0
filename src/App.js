@@ -52,6 +52,8 @@ import AddBarProductsForm from './barsandresturants/barproductsform';
 import BarsAndResturantsDashBoard from './barsandresturants/barsandresturantsdashboard';
 import AddBarsForm from './barsandresturants/addbarsform';
 import RegisterBarForm from './barsandresturants/addbarsformnew';
+import NewAddBarProductsForm from './barsandresturants/newbarproductsform';
+import EditBarProductsGrid from './barsandresturants/editbarsproducts';
 
  // IMPLEMENT ALL ROUTES HERE
 
@@ -99,8 +101,10 @@ function App(){
          <Route exact path='/signupbarmanager' element={<SignUpBarManager/>}/>
          <Route exact path='/signinbarmanager' element={<SignInBarManager/>}/>
          <Route exact path='/barsandresturantsdashboard' element={<BarsAndResturantsDashBoard/>}/>
-         <Route exact path='/addbarproductsform' element={<AddBarProductsForm/>}/>
+         <Route exact path='/addbarproductsform' element={<AddBarProductsForm />}/>
          <Route exact path='/addbarform' element={<RegisterBarForm/>}/>
+         <Route exact path='/editbarproducts' element={<EditBarProductsGrid/>}/>
+
          
          
         

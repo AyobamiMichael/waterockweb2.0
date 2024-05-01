@@ -16,7 +16,7 @@ const BarsAndResturantsNavBar = () => {
             <li className="addproductnavbar-item"><a href='/addbarproductsform'>
             Add Product
             </a></li>
-            <li className="editnavbar-item"><a href=''>
+            <li className="editnavbar-item"><a href='/editbarproducts'>
               Edit
             </a></li>
         <li className="signoutnavbar-item">

@@ -43,14 +43,15 @@ const NewAddBarProductsForm = () => {
   const [formData, setFormData] = useState({
     textboxes: ['', ''],
     dropdowns: [''],
-   // selectedImage: null,
+    selectedImage: null,
   });
 
   
  const [catSelected, setCat] = useState('');
  const [otherProductName, setOtherProductName] = useState('');
+ const [otherProductImage, setOtherProductImageName] = useState('');
  const [productPrice, setProductPrice] = useState('');
- //const [otherProductImage, setOtherProductImageName] = useState('');
+
  
   const handleTextboxChange = (e, index) => {
     const updatedTextboxes = [...formData.textboxes];
@@ -87,18 +88,14 @@ const NewAddBarProductsForm = () => {
               break;
     }
    // console.log(catSelected);
-     console.log( updatedDropdowns[index]);
+     //console.log( updatedDropdowns[index]);
    
   };
 
   const handleImageChange = (e) => {
-   // const selectedImageBuffer = e.target.files[0]['size'];
     const selectedImage = e.target.files[0];
-   // setFormData({ ...formData, selectedImage });
-  //  console.log(selectedImageBuffer/1000);
-     //console.log(selectedImage);
- //   setProductImageBuffer(selectedImageBuffer);
-    //setOtherProductImageName(selectedImage);
+   
+    setOtherProductImageName(selectedImage);
 
   };
   const handleSubmit = async (e) => {
@@ -107,14 +104,14 @@ const NewAddBarProductsForm = () => {
     const requestData = {
       catSelected,
       otherProductName,
+      otherProductImage,
       productPrice,
-      //otherProductImage,
       barManagerUserName,
     };
     
     console.log(requestData);
     try {
-      const response = await fetch("http://localhost:4000/registerbarproductinfo", {
+      const response = await fetch("http://localhost:4000/newregisterbarproductinfo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -133,13 +130,13 @@ const NewAddBarProductsForm = () => {
         setFormData({
           textboxes: ['', ''],
           dropdowns: [''],
-          //selectedImage: null,
+          selectedImage: null,
         });
         setCat('');
         setProductPrice('');
         setOtherProductName('');
         setBarUsername('');
-        //setOtherProductImageName('');
+        setOtherProductImageName('');
       } else {
         alert(data.error)
       }
@@ -170,7 +167,8 @@ const NewAddBarProductsForm = () => {
             {item}
           </option>)}
         </select>
-
+     
+         {catSelected === 'Others' && <>
         <input
           type="text"
           className="form-control"
@@ -179,7 +177,19 @@ const NewAddBarProductsForm = () => {
           required='true' 
           placeholder="Enter Product Name"  
         />
-         
+            <div className="form-group">
+      <label>Image:</label>
+          <input
+          type="file"
+          accept="image/*"
+          className="form-control-file"  
+          onChange={handleImageChange}
+        />
+      </div>
+        </>
+
+          }
+
         <div className="form-group"> 
         <input
           type="text"

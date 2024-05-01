@@ -170,15 +170,14 @@ const AddBarProductsForm = () => {
             {item}
           </option>)}
         </select>
-
-        <input
-          type="text"
-          className="form-control"
-          value={formData.textboxes[0]}
-          onChange={(e) => handleTextboxChange(e, 0)}
-          required='true' 
-          placeholder="Enter Product Name"  
-        />
+       <label htmlFor="shortDescription">Short Description (Optional)</label>
+        <textarea
+        id="shortDescription"
+        className="form-control"
+        value={formData.textboxes[0]}
+        onChange={(e) => handleTextboxChange(e, 0)}
+        style={{ height: '200px' }}
+         />
          
         <div className="form-group"> 
         <input
@@ -211,6 +210,16 @@ export default  AddBarProductsForm;
 
 /*
  * 
+
+
+ <label>Short Description(Optional)</label>
+        <input
+          type="text"
+          className="form-control"
+          value={formData.textboxes[0]}
+          onChange={(e) => handleTextboxChange(e, 0)}
+          style={{ height: '200px' }}
+        />
  * 
  *  {catSelected === 'Others' && <>
         <input
