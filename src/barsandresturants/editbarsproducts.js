@@ -9,20 +9,25 @@ function EditBarProductsGrid() {
     const [barproductsbyusername, setBarProductsByUsername] = useState([]);
     const [barManagerUserName, setBarUsername] = useState('');
 
+    useEffect(()=>{
+        const storedBarUsername = localStorage.getItem('barusername');
+        if (storedBarUsername) {
+          setBarUsername(storedBarUsername);
+        }
+    }, []);
+    console.log(barManagerUserName);
     
+
   useEffect(() => {
     fetchData();
-    const storedBarUsername = localStorage.getItem('barusername');
-    if (storedBarUsername) {
-      setBarUsername(storedBarUsername);
-    }
-
+   // filterBarProductsData();
   }, []);
-  console.log(barManagerUserName);
+ 
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/barproducts/${barManagerUserName}/`);
+      //const response = await axios.get(`http://localhost:4000/barproducts/${barManagerUserName}/`);
+      const response = await axios.get('http://localhost:4000/barproducts');
       setBarProducts(response.data);
       //console.log(response.data);
 
@@ -35,17 +40,47 @@ function EditBarProductsGrid() {
   };
 
   useEffect(() => {
-    console.log(barproducts); 
+    //console.log(barproducts); 
     
   }, [barproducts]);
+
+  useEffect(() => {
+   // console.log("barproductsbyusername:  "+barproductsbyusername); 
+    
+  }, [barproductsbyusername]);
+  // Destructure the bar products list of objects
+
+  const destructedBarProductsList = barproducts.map(({ _id, barManagerUserName, productPrice, otherProductName, catSelected  
+  }) => ({_id, barManagerUserName,productPrice, otherProductName, catSelected }));
+  //const [firstProduct, secondProduct, ...restProducts] = barproducts;
+
+ 
+   //console.log('DestructedData  '+destructedBarProductsList);
+   const filteredProducts = destructedBarProductsList
+   .filter(product => product.barManagerUserName === barManagerUserName)
+   .map(({_id, catSelected, productPrice, otherProductName }) => ({
+     _id,
+     catSelected,
+     productPrice,
+     otherProductName
+   }));
+   filteredProducts.forEach(item => {
+      //console.log(item.catSelected);
+  });
+   //console.log(filteredProducts);
+  //const filterBarProductsData =() =>{
   
+  //   setBarProductsByUsername(filteredProducts);
+     
+  //}
   const handleEdit = async (id, updatedPrice) => {
+    //console.log(id);
     try {
-      await axios.put(`/api/products/${id}`, { productprice: updatedPrice });
+      await axios.put(`http://localhost:4000/updateandsavebarproduct/${id}`, { productprice: updatedPrice });
       // Update the local state after successful edit
       setBarProducts(prevProducts =>
         prevProducts.map(product =>
-          product.id === id ? { ...product, productprice: updatedPrice } : product
+          product._id === id ? { ...product, productprice: updatedPrice } : product
         )
       );
     } catch (error) {
@@ -55,10 +90,11 @@ function EditBarProductsGrid() {
 
 
   const columns = [
-    { field: '_id', headerName: 'ID', width: 100 },
-    { field: 'catSelected', headerName: 'Product Name', width: 200 },
+    { field: 'catSelected', headerName: 'Category Selected', width: 200 },
     { field: 'productPrice', headerName: 'Product Price', width: 150, editable: true },
+    { field: 'otherProductName', headerName: 'Other Product Name', width: 200 }
   ];
+  
 
   
  /*fetch("http://localhost:4000/barproducts", {
@@ -94,19 +130,20 @@ function EditBarProductsGrid() {
       <div className='barproductnavbar'><BarsAndResturantsNavBar/></div>
       <div style={{ height: 400, width: '100%' }}>
       <DataGrid
-        rows={barproducts}
+        rows={filteredProducts}
         columns={columns}
         pageSize={5}
         checkboxSelection={false}
         editMode="row"
-        onEditCellChangeCommitted={({ id, field, props }) => {
-          if (field === 'productprice') {
-            handleEdit(id, props.value);
-          }
+        
+        getRowId={row => row._id}
+        onEditCellChangeCommitted={({ _id, field, props }) => {
+            console.log('Edit committed:', _id, field, props);
+            
         }}
+        //onCellDoubleClick={(params) => onEditCellChangeCommitted(params)}
       />
-    </div>
-      
+    </div>    
   </div>
   );
 
@@ -117,5 +154,9 @@ export default EditBarProductsGrid;
 
 
 /*
-   
+  
+    console.log(_id);
+          if (field === 'productPrice') {
+            handleEdit(_id, props.value);
+          }
 */
