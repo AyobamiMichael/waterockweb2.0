@@ -75,17 +75,36 @@ function EditBarProductsGrid() {
   //}
   const handleEdit = async (id, updatedPrice) => {
     //console.log(id);
-    try {
-      await axios.put(`http://localhost:4000/updateandsavebarproduct/${id}`, { productprice: updatedPrice });
-      // Update the local state after successful edit
-      setBarProducts(prevProducts =>
-        prevProducts.map(product =>
-          product._id === id ? { ...product, productprice: updatedPrice } : product
-        )
-      );
-    } catch (error) {
-      console.error('Error updating product price:', error);
-    }
+    //await axios.put(`http://localhost:4000/updateandsavebarproduct/${id}`, { productprice: updatedPrice });
+   
+    fetch('http://localhost:4000/updateandsavebarproduct',{
+        method: "POST",
+        crossDomain: true,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({
+              id,
+              updatedPrice
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+         
+         console.log('Edited sucessfully', data);
+         alert(data.data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+
   };
 
 
@@ -95,9 +114,10 @@ function EditBarProductsGrid() {
     { field: 'otherProductName', headerName: 'Other Product Name', width: 200 }
   ];
   
-
   
- /*fetch("http://localhost:4000/barproducts", {
+ 
+  
+ /*fetch(" http://localhost:4000/barproducts", {
     method: "POST",
     crossDomain: true,
     headers: {
@@ -137,11 +157,23 @@ function EditBarProductsGrid() {
         editMode="row"
         
         getRowId={row => row._id}
-        onEditCellChangeCommitted={({ _id, field, props }) => {
-            console.log('Edit committed:', _id, field, props);
-            
-        }}
-        //onCellDoubleClick={(params) => onEditCellChangeCommitted(params)}
+       /* onRowEditStart={({id, field, props})=>{
+            props = ''
+            console.log(props);
+            if(field === 'productPrice'){
+               // handleEdit(id)
+            }
+        }}*/
+
+        onRowEditStart={(params) => {
+          
+            console.log("Editing row:", params.row.productPrice, params.row._id);
+            handleEdit(params.row._id,  params.row.productPrice)
+           
+          }}
+       
+      //  isCellEditable={(params) => console.log(params.row.productPrice)}
+       
       />
     </div>    
   </div>
@@ -159,4 +191,22 @@ export default EditBarProductsGrid;
           if (field === 'productPrice') {
             handleEdit(_id, props.value);
           }
+
+
+
+
+
+
+           try {
+      //  await axios.put('http://localhost:4000/updateandsavebarproduct');
+     await axios.put(`http://localhost:4000/updateandsavebarproduct/${id}`, { productprice: updatedPrice });
+      
+      setBarProducts(prevProducts =>
+        prevProducts.map(product =>
+          product._id === id ? { ...product, productprice: updatedPrice } : product
+        )
+      );
+    } catch (error) {
+      console.error('Error updating product price:', error);
+    }
 */

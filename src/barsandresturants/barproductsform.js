@@ -24,14 +24,14 @@ const AddBarProductsForm = () => {
 
  
   
-  const categoryItems = ['Abacha','Sharwama','Nkwobi', 'Zobo', 
+  const categoryItems = ['Abacha','Chicken Sharwama','Nkwobi', 'Zobo','Beef Sharwama',
   'Ice Cream', 
   'Cow Leg',
   'Isi ewu',
   'Fresh fish',
   'Crooker fish',
   'Asuun(Pepperd meat)',
-  'Chicken vegetables',
+  'Chicken Pepper Soup',
   'Chicken Parts',
   'Rice',
   'Swallow',
