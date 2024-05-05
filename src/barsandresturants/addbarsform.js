@@ -101,7 +101,7 @@ const AddBarsForm = () => {
     console.log(formDataNew);
 
     try {
-      const response = await fetch("http://localhost:4000/registerbars", {
+      const response = await fetch("https://waterockapi.wegotam.com/registerbars", {
         method: "POST",
         body: formDataNew,
       });

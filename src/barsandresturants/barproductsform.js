@@ -30,7 +30,8 @@ const AddBarProductsForm = () => {
   'Isi ewu',
   'Fresh fish',
   'Crooker fish',
-  'Asuun(Pepperd meat)',
+  'Asuun(Peppered meat)',
+  'Peppered Snail',
   'Chicken Pepper Soup',
   'Chicken Parts',
   'Rice',
@@ -114,7 +115,7 @@ const AddBarProductsForm = () => {
     
     console.log(requestData);
     try {
-      const response = await fetch("http://localhost:4000/registerbarproductinfo", {
+      const response = await fetch("https://waterockapi.wegotam.com/registerbarproductinfo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
