@@ -14,16 +14,64 @@ const AddBarProductsForm = () => {
 
    // Barmanager username to attached to the products and details 
    const [barManagerUserName, setBarUsername] = useState('');
+   const[allbars, setAllBars] = useState([]);
+   const[filteredbars, setFilteredBars] = useState([]);
+   //var filteredBarsDataBybarManagerUserNameList = [];
+   const [filteredBarsDataBybarManagerUserNameList, setFilteredBarsDataBybarManagerUserNameList] = useState([]);
+
+
    useEffect(() => {
     const storedBarUsername = localStorage.getItem('barusername');
      if (storedBarUsername) {
        setBarUsername(storedBarUsername);
      }
+      
    }, []);
    console.log(barManagerUserName);
-
+  // Use the username to get all the bars assigned to this username in the db
  
+   useEffect(()=>{
+    fetchAllBarsData();
+   }, []);
+   
+  const fetchAllBarsData = async () => {
+    try {
+      const response = await axios.get('https://waterockapi.wegotam.com/allbars');
+      setAllBars(response.data);
+      //console.log(response.data);
+
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+     // console.log(allbars);
+
+    
+  };
   
+  useEffect(()=>{
+    filterBarNamesbarManagerUserName();
+    console.log(allbars);
+  },[allbars]);
+
+  
+  
+  const filterBarNamesbarManagerUserName = () =>{
+      // filteredBarsDataBybarManagerUserNameList  = allbars.filter(item =>{    
+      // item.barManagerUserName === barManagerUserName;
+      // }
+      //);
+      const filteredBars = allbars.filter(item => item.barManagerUserName === barManagerUserName);
+      setFilteredBarsDataBybarManagerUserNameList(filteredBars);
+        
+       const barNamesList =  filteredBarsDataBybarManagerUserNameList.map(item => item.barName);
+         setFilteredBars(barNamesList);
+       // console.log(barNamesList);
+       
+  }
+  
+  
+
+
   const categoryItems = ['Abacha','Chicken Sharwama','Nkwobi', 'Zobo','Beef Sharwama',
   'Ice Cream', 
   'Cow Leg',
@@ -49,6 +97,7 @@ const AddBarProductsForm = () => {
 
   
  const [catSelected, setCat] = useState('');
+ const [barName, setBarNameSelected] = useState('');
  const [otherProductName, setOtherProductName] = useState('');
  const [productPrice, setProductPrice] = useState('');
  //const [otherProductImage, setOtherProductImageName] = useState('');
@@ -84,6 +133,9 @@ const AddBarProductsForm = () => {
        case 0:
         setCat(updatedDropdowns[index])  
         break;
+        case 1:
+          setBarNameSelected(updatedDropdowns[index])  
+          break;
             default:
               break;
     }
@@ -107,6 +159,7 @@ const AddBarProductsForm = () => {
   
     const requestData = {
       catSelected,
+      barName,
       otherProductName,
       productPrice,
       //otherProductImage,
@@ -137,6 +190,7 @@ const AddBarProductsForm = () => {
           //selectedImage: null,
         });
         setCat('');
+        setFilteredBars('');
         setProductPrice('');
         setOtherProductName('');
         setBarUsername('');
@@ -167,6 +221,19 @@ const AddBarProductsForm = () => {
           placeholder="Select Category"   
         >
           {categoryItems.map((item, index)=>
+          <option  key={index} value={item}>
+            {item}
+          </option>)}
+        </select>
+        <label>Select Bar:</label>
+           <select
+          className="form-control"
+          value={formData.dropdowns[1]}
+          required={true}  
+          onChange={(e) => handleDropdownChange(e, 1)}
+          placeholder="Select Bar"   
+        >
+          {filteredbars.map((item, index)=>
           <option  key={index} value={item}>
             {item}
           </option>)}
