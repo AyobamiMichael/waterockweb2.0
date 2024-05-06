@@ -19,6 +19,9 @@ const AddBarProductsForm = () => {
    //var filteredBarsDataBybarManagerUserNameList = [];
    const [filteredBarsDataBybarManagerUserNameList, setFilteredBarsDataBybarManagerUserNameList] = useState([]);
 
+   var newfilteredBars = [];
+   var barNamesList = []; 
+
 
    useEffect(() => {
     const storedBarUsername = localStorage.getItem('barusername');
@@ -47,30 +50,32 @@ const AddBarProductsForm = () => {
 
     
   };
+
+  
+  
   
   useEffect(()=>{
     filterBarNamesbarManagerUserName();
     console.log(allbars);
-  },[allbars]);
+    },[allbars, barManagerUserName]);
 
-  
+ 
   
   const filterBarNamesbarManagerUserName = () =>{
-      // filteredBarsDataBybarManagerUserNameList  = allbars.filter(item =>{    
-      // item.barManagerUserName === barManagerUserName;
-      // }
-      //);
-      const filteredBars = allbars.filter(item => item.barManagerUserName === barManagerUserName);
-      setFilteredBarsDataBybarManagerUserNameList(filteredBars);
-        
-       const barNamesList =  filteredBarsDataBybarManagerUserNameList.map(item => item.barName);
-         setFilteredBars(barNamesList);
+      
+      //const filteredBars = allbars.filter(item => item.barManagerUserName === barManagerUserName);
+      // setFilteredBarsDataBybarManagerUserNameList(filteredBars);
+      // const barNamesList =  filteredBarsDataBybarManagerUserNameList.map(item => item.barName);
+        // setFilteredBars(barNamesList);
        // console.log(barNamesList);
        
+          newfilteredBars = allbars.filter(item => item.barManagerUserName === barManagerUserName);
+       //setFilteredBarsDataBybarManagerUserNameList(filteredBars);
+         barNamesList =  newfilteredBars.map(item => item.barName);
+         setFilteredBars(barNamesList);
   }
   
   
-
 
   const categoryItems = ['Abacha','Chicken Sharwama','Nkwobi', 'Zobo','Beef Sharwama',
   'Ice Cream', 
@@ -190,7 +195,6 @@ const AddBarProductsForm = () => {
           //selectedImage: null,
         });
         setCat('');
-        setFilteredBars('');
         setProductPrice('');
         setOtherProductName('');
         setBarUsername('');
