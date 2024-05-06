@@ -27,7 +27,7 @@ function EditBarProductsGrid() {
   const fetchData = async () => {
     try {
       //const response = await axios.get(`http://localhost:4000/barproducts/${barManagerUserName}/`);
-      const response = await axios.get('http://localhost:4000/barproducts');
+      const response = await axios.get('https://waterockapi.wegotam.com/barproducts');
       setBarProducts(response.data);
       //console.log(response.data);
 
