@@ -12,7 +12,7 @@ function BarsAndResturantsDashBoard () {
         <h2>Number of views</h2>
         <div className='advertise-container'>
           <h2>Advertise Here</h2>
-          <p>Consider using responsive ad units or adjusting ad placements for better visibility on mobile devices.</p>
+          <p></p>
         </div>
       </div>
     </div>

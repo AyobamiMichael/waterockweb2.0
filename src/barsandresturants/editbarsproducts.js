@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
 import BarsAndResturantsNavBar from './barnavbar';
-
+import './editbarsproducts.css';
 
 function EditBarProductsGrid() {
     const [barproducts, setBarProducts] = useState([]);
@@ -148,7 +148,7 @@ function EditBarProductsGrid() {
   return (
     <div className='main'>
       <div className='barproductnavbar'><BarsAndResturantsNavBar/></div>
-      <div style={{ height: 400, width: '100%' }}>
+      <div className='grid'>
       <DataGrid
         rows={filteredProducts}
         columns={columns}
