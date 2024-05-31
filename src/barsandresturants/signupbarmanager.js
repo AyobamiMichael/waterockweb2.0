@@ -19,7 +19,7 @@ export default class SignUpBarManager extends Component {
        e.preventDefault();
         const { fname, lname, uname, password } = this.state;
         console.log(fname, lname, uname, password);
-        fetch("http://localhost:4000/registerbarmanager",{
+        fetch("https://waterockapi.wegotam.com/registerbarmanager",{
            method: "POST",
            crossDomain: true,
            headers: {

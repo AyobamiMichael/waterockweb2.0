@@ -112,7 +112,7 @@ const handleImageChange = (e) => {
     }
     
     try {
-      const response = await fetch("http://localhost:4000/registerbars", {
+      const response = await fetch("https://waterockapi.wegotam.com/registerbars", {
         method: "POST",
         body: formData,
       });

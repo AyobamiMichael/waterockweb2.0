@@ -77,7 +77,7 @@ function EditBarProductsGrid() {
     //console.log(id);
     //await axios.put(`http://localhost:4000/updateandsavebarproduct/${id}`, { productprice: updatedPrice });
    
-    fetch('http://localhost:4000/updateandsavebarproduct',{
+    fetch('https://waterockapi.wegotam.com/updateandsavebarproduct',{
         method: "POST",
         crossDomain: true,
         headers: {
