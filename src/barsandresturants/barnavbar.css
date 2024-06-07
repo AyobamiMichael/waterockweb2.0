@@ -37,6 +37,13 @@
   position: relative;
   top: 1em;
 }
+
+.editnavbarproducts-item{
+  display: inline-block;
+  left: 13em;
+  position: relative;
+  top: 1em;
+}
 .signoutnavbar-item{
 
   display: inline-block;
@@ -90,6 +97,13 @@
 .editnavbar-item{
   display: inline-block;
   left: 2.3em;
+  position: relative;
+  top: 1em;
+}
+
+.editnavbarproducts-item{
+  display: inline-block;
+  left: 13em;
   position: relative;
   top: 1em;
 }
@@ -169,7 +183,12 @@
   position: relative;
   top: 1em;
 }
-
+.editnavbarproducts-item{
+  display: inline-block;
+  left: 0.2em;
+  position: relative;
+  top: 1em;
+}
 .navbar-item:hover {
   text-decoration: underline;
   
