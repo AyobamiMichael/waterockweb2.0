@@ -54,6 +54,7 @@ import AddBarsForm from './barsandresturants/addbarsform';
 import RegisterBarForm from './barsandresturants/addbarsformnew';
 import NewAddBarProductsForm from './barsandresturants/newbarproductsform';
 import EditBarProductsGrid from './barsandresturants/editbarsproducts';
+import ViewDeleteBar from './barsandresturants/viewdeletebars';
 
  // IMPLEMENT ALL ROUTES HERE
 
@@ -104,6 +105,7 @@ function App(){
          <Route exact path='/addbarproductsform' element={<AddBarProductsForm />}/>
          <Route exact path='/addbarform' element={<RegisterBarForm/>}/>
          <Route exact path='/editbarproducts' element={<EditBarProductsGrid/>}/>
+         <Route exact path='/viewdeletebar' element={<ViewDeleteBar/>}/>
 
          
          

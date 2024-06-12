@@ -19,7 +19,7 @@ const BarsAndResturantsNavBar = () => {
             <li className="editnavbar-item"><a href='/editbarproducts'>
               Edit Product
             </a></li>
-            <li className="editnavbarproducts-item"><a href='/editbarproducts'>
+            <li className="editnavbarproducts-item"><a href='/viewdeletebar'>
               Edit Bar
             </a></li>
         <li className="signoutnavbar-item">
