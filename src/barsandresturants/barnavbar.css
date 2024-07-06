@@ -1,5 +1,4 @@
 /* Default View */
-/* IT'S ALL HISTORY LET NOTHING WORRY YOU*/
 .navbar {
   background-color: #333;
   padding: 10px 20px;
@@ -9,116 +8,67 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  
 }
 
-.homenavbar-item{
-    display: inline-block;
-    left: 0em;
-    position: relative;
-    top: 1em;
-}
-.addbarnavbar-item{
-  display: inline-block;
-  left: 5em;
-  position: relative;
-  top: 1em;
-
-}
-.addproductnavbar-item{
-  display: inline-block;
-  left: 10em;
-  position: relative;
-  top: 1em;
-}
-.editnavbar-item{
-  display: inline-block;
-  left: 12em;
-  position: relative;
-  top: 1em;
-}
-
-.editnavbarproducts-item{
-  display: inline-block;
-  left: 13em;
-  position: relative;
-  top: 1em;
-}
-.signoutnavbar-item{
-
-  display: inline-block;
-  left: 15em;
-  position: relative;
-  top: 1em;
-}
 .navbar-item {
   display: inline-block;
-  margin-right: 0;
+  margin-right: 2em;
+  position: relative;
+  top: 1em;
   cursor: pointer;
 }
 
-.navbar-item:hover {
+.navbar-item a:hover {
   text-decoration: underline;
 }
 
+.submenu {
+  display: block;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  background-color: #444;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  z-index: 2;
+  
+}
 
+.submenu-item {
+  margin: 5px 0;
+}
 
+.submenu-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu-item a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
- 
-  .barnavbar-menu {
+  .navbar-menu {
     text-align: center;
   }
 
-  .barnavbar-item {
+  .navbar-item {
     display: block;
     margin: 10px 0;
+    position: relative;
+    left: 0;
   }
 
-  .homenavbar-item{
-    display: inline-block;
-    left: 0em;
+  .submenu {
     position: relative;
-    top: 1em;
-}
-.addbarnavbar-item{
-  display: inline-block;
-  left: 1em;
-  position: relative;
-  top: 1em;
-
-}
-.addproductnavbar-item{
-  display: inline-block;
-  left: 2em;
-  position: relative;
-  top: 1em;
+    top: 0;
+    left: 0;
+  }
 }
 
-.editnavbar-item{
-  display: inline-block;
-  left: 2.3em;
-  position: relative;
-  top: 1em;
-}
-
-.editnavbarproducts-item{
-  display: inline-block;
-  left: 13em;
-  position: relative;
-  top: 1em;
-}
-.signoutnavbar-item{
-
-  display: inline-block;
-  left: 3em;
-  position: relative;
-  top: 1em;
-}
-}
-
-/* ALLWAYS USE  DISPLAY BLOCK  FOR MOBILE 480PX ANDROID */
 @media (max-width: 480px) {
-
   .navbar {
     background-color: #333;
     padding: 5px 2px;
@@ -132,99 +82,33 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
-    
   }
-  .barandresturantnavbar{
+  
+  .bar-and-restaurant-navbar {
     position: relative;
     display: block;
-     margin-top: 30em;
-     margin-left: -3em;
+    margin-top: 30em;
+    margin-left: -3em;
   }
 
-  .barnavbar-menu {
+  .navbar-menu {
     text-align: center;
   }
 
-  .barnavbar-item {
+  .navbar-item {
     display: block;
     margin: 2px 0;
+    position: relative;
+    left: 0;
   }
 
-  .homenavbar-item{
-    display: inline-block;
-    left: 2em;
+  .submenu {
     position: relative;
-    top: 1em;
-}
-.addbarnavbar-item{
-  display: inline-block;
-  left: 1.4em;
-  position: relative;
-  top: 1em;
+    top: 0;
+    left: 0;
+  }
 
+  .navbar-item:hover {
+    text-decoration: underline;
+  }
 }
-.addproductnavbar-item{
-  display: inline-block;
-  left: 0.5em;
-  position: relative;
-  top: 1em;
-}
-.editnavbar-item{
-  display: inline-block;
-  left: 0.3em;
-  position: relative;
-  top: 1em;
-}
-.signoutnavbar-item{
-
-  display: inline-block;
-  left: 1em;
-  position: relative;
-  top: 1em;
-}
-.editnavbarproducts-item{
-  display: inline-block;
-  left: 0.2em;
-  position: relative;
-  top: 1em;
-}
-.navbar-item:hover {
-  text-decoration: underline;
-  
-}
- 
-}
-/*
-@media only screen and (min-width: 480px) {
-
-.barnavbar{
-  position: relative;
-  top: -0.5em;
-  display: block;
-  background-color: #333;
-  
-}
-.barnavbar-menu {
-text-align: center;
-list-style-type: none;
-margin: 0;
-padding: 0;
-
-}
-
-.barnavbar-item {
-
-position: relative;
-margin: 3px 0;
-top: 2em;
-color: #fff;
-cursor: pointer;
-}
-
-.barnavbar-item:hover {
-text-decoration: underline;
-}
-
-}
-*/

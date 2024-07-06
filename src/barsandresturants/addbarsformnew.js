@@ -23,7 +23,7 @@ function RegisterBarForm(){
     "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara", "FCT"
   ];
 
-
+  const listOfBusinessType = ['Bars','Fast Foods','Joints', 'Resturants']
 
   const [formData, setFormData] = useState({
     textboxes: ['', '', '',],
@@ -37,6 +37,7 @@ function RegisterBarForm(){
  const [barState, setBarState] = useState('');
  const [barPhone, setBarPhone] = useState('');
  const [barImage, setBarImageName] = useState('');
+ const [businessType, setBusinessType] = useState('');
  
 
 
@@ -75,6 +76,9 @@ function RegisterBarForm(){
        case 0:
         setBarState(updatedDropdowns[index])  
         break;
+        case 1:
+        setBusinessType(updatedDropdowns[index]);
+        break;
        default:
               break;
     }
@@ -105,6 +109,7 @@ const handleImageChange = (e) => {
     formData.append('barPhone', barPhone);
     formData.append('barImage', barImage);
     formData.append('barManagerUserName',barManagerUserName);
+    formData.append('businessType', businessType); // Yet to be add to the server and DB
 
     if(!/^0\d{10}$/.test(barPhone)){
         alert('Invalid number');
@@ -156,7 +161,7 @@ const handleImageChange = (e) => {
               className="form-control"
               value={formData.textboxes[0]}
               onChange={(e) => handleTextboxChange(e, 0)}
-              placeholder="Enter Bar Name"
+              placeholder="Business Name"
               required = 'true'
             />
             <input
@@ -167,6 +172,21 @@ const handleImageChange = (e) => {
               placeholder="Enter Address"
               required = 'true'
             />
+
+<label>Business Type:</label>
+             <select
+              className="form-control"
+              value={formData.dropdowns[1]}
+              onChange={(e) => handleDropdownChange(e, 1)}
+              placeholder="Business Type"  
+              required = 'true'
+            >
+              {listOfBusinessType.map((item, index)=>
+          <option  key={index} value={item}>
+            {item}
+          </option>)}
+         
+            </select> 
             <label>Select State:</label>
             <select
               className="form-control"

@@ -1,39 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './barnavbar.css';
 
+const BarsAndRestaurantsNavBar = () => {
+  const [isAddBarSubMenuVisible, setIsAddBarSubMenuVisible] = useState(false);
+  const [isAddProductSubMenuVisible, setIsAddProductSubMenuVisible] = useState(false);
 
-const BarsAndResturantsNavBar = () => {
+  const handleAddBarClick = () => {
+    setIsAddBarSubMenuVisible(!isAddBarSubMenuVisible);
+  };
+
+  const handleAddProductClick = () => {
+    setIsAddProductSubMenuVisible(!isAddProductSubMenuVisible);
+  };
+
   return (
-    <div className='barandresturantnavbar'>
-    <nav className="navbar">
-      <ul className="navbar-menu">
-        <li className="homenavbar-item">
-        <a href='/barsandresturantsdashboard'>Home</a>
-        </li>
-        <li className="addbarnavbar-item"><a href='/addbarform'>
-            Add Bar
-            </a></li>
-            <li className="addproductnavbar-item"><a href='/addbarproductsform'>
-            Add Product
-            </a></li>
-            <li className="editnavbar-item"><a href='/editbarproducts'>
-              Edit Product
-            </a></li>
-            <li className="editnavbarproducts-item"><a href='/viewdeletebar'>
-              Edit Bar
-            </a></li>
-        <li className="signoutnavbar-item">
-            <a href='/signinbarmanager'>
-            Sign Out
-            </a>
-            </li>
-          
-      </ul>
-    </nav> 
+    <div className='bar-and-restaurant-navbar'>
+      <nav className="navbar">
+        <ul className="navbar-menu">
+          <li className="navbar-item home-navbar-item">
+            <a href='/barsandresturantsdashboard'>Home</a>
+          </li>
+          <li className="navbar-item add-bar-navbar-item" onClick={handleAddBarClick}>
+            <a href='#'>Business</a>
+            {isAddBarSubMenuVisible && (
+              <ul className="submenu">
+                <li className="submenu-item">
+                  <a href='/addbarform'>Add</a>
+                </li>
+                <li className="submenu-item">
+                  <a href='/viewdeletebar'>Edit</a>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li className="navbar-item add-product-navbar-item" onClick={handleAddProductClick}>
+            <a href='#'>Product</a>
+            {isAddProductSubMenuVisible && (
+              <ul className="submenu">
+                <li className="submenu-item">
+                  <a href='/addbarproductsform'>Add</a>
+                </li>
+                <li className="submenu-item">
+                  <a href='/editbarproducts'>Edit</a>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li className="navbar-item signout-navbar-item">
+            <a href='/signinbarmanager'>Sign Out</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
 
-export default BarsAndResturantsNavBar;
-
-//   {<AddBarsForm />}
+export default BarsAndRestaurantsNavBar;

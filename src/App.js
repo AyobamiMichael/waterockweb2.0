@@ -50,7 +50,6 @@ import SignUpBarManager from './barsandresturants/signupbarmanager';
 import SignInBarManager from './barsandresturants/signinbarmanager';
 import AddBarProductsForm from './barsandresturants/barproductsform';
 import BarsAndResturantsDashBoard from './barsandresturants/barsandresturantsdashboard';
-import AddBarsForm from './barsandresturants/addbarsform';
 import RegisterBarForm from './barsandresturants/addbarsformnew';
 import NewAddBarProductsForm from './barsandresturants/newbarproductsform';
 import EditBarProductsGrid from './barsandresturants/editbarsproducts';
