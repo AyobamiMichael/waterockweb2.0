@@ -1,0 +1,96 @@
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+   
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+    height: 800px;
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 600px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+
+  .image{
+    display: flex;
+    height: 600px;
+    width: 500px;
+    border-radius: 0%;
+    position: relative;
+  }
+  .desc{
+      color: white;
+      bottom: 6em;
+      position: relative;
+      font-size: 70px;
+      right: -1em;
+  }
+  
+  @media screen and (max-width: 600px) {
+    
+    .slideshow {
+      width: 350px;
+      position: relative;
+      bottom: -3em; 
+      height: 350px;
+    }
+    .slide {
+      height: 400px;
+      width: 100%;
+    }
+    .image{
+      display: flex;
+      height: 500px;
+      width: 110%;
+      border-radius: 0%;
+      position: relative;
+    }
+    .slideshowDot {
+      position: relative;
+      top: -4em;
+      
+      
+    }
+
+     .desc{
+      color: white;
+      bottom: 6em;
+      position: relative;
+      font-size: 30px;
+      left: 0em;
+      bottom: 10em;
+  }
+       
+  }
+

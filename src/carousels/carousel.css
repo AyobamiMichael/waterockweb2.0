@@ -1,0 +1,60 @@
+.carouselslides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Adjust the height as needed for your layout */
+  position: relative;
+  bottom: -30em;
+  top: 16.5em;
+}
+
+.carousel-container {
+  max-width: 100%; /* Make the carousel container responsive */
+  width: 50%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the carousel horizontally */
+}
+
+/* Add media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .carouselslides {
+    height: 40vh; /* Adjust the height for mobile devices */
+  }
+}
+
+@media (max-width: 640px) {
+  .carouselslides {
+         /*position: relative;
+         margin-top: 37em;
+         margin-left: -1em;
+         height: 15em;
+         width: 5em;*/
+         display: none;
+  }
+}
+
+
+
+
+
+/*
+.carouselslides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: -5em;
+    right: -20em;
+    position: relative;
+
+  }
+  .carousel-container {
+    max-width: 400px;
+    max-height: 10px;
+  }
+  .carouselimage{
+    position: relative;
+    top: -5em;
+    left: 50px;
+   
+  }
+  */

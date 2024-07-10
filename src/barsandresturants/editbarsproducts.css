@@ -1,0 +1,28 @@
+.grid{
+    top: 100px;
+    position: relative;
+    left: 10px;
+    width: 100%;
+    height: 450px;
+}
+
+
+
+@media (max-width: 480px) {
+    .main{
+       position: relative;        
+    }
+    .barproductnavbar{
+        display: none;
+    }
+   
+    .grid{
+        margin-top: 25em;
+        position: relative;
+        margin-left: -2em;
+        width: 400px;
+        height: 500px;
+    }
+  
+    
+  }

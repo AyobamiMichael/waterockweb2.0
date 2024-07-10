@@ -1,0 +1,116 @@
+/* Default View */
+
+.barsandresturantlandingpage{
+    position: relative;
+    left: -5em;
+}
+.barandresturantdashboardnavbar{
+  position: relative;
+  top: -1.2em;
+}
+/*
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    display: inline-block;
+    margin-right: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .navbar-item:hover {
+    text-decoration: underline;
+  }
+*/  
+
+/*  
+  @media (max-width: 768px) {
+   
+    .navbar-menu {
+      text-align: center;
+    }
+  
+    .navbar-item {
+      display: block;
+      margin: 10px 0;
+    }
+  } 
+   */
+
+  /* ALLWAYS USE  DISPLAY BLOCK  FOR MOBILE 480PX ANDROID */
+ 
+  @media screen and (max-width: 480px) {
+
+    .main{
+      position: fixed;
+
+   }
+     
+    .barandresturantdashboardnavbar{
+        position: relative;
+        margin-top: 36em;
+        
+    }
+   
+   .barsandresturantlandingpage {
+     
+      margin-top: 5em;
+      margin-left: 10em;
+    }
+    
+    
+    .barsandresturantlandingpage h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    
+    .barsandresturantlandingpage h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+   
+ } 
+ 
+
+/* 
+ @media only screen and (min-width: 480px) {
+
+  .navbar{
+    position: relative;
+    top: -0.5em;
+    display: block;
+    background-color: #333;
+    
+}
+.navbar-menu {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.navbar-item {
+
+  position: relative;
+  margin: 3px 0;
+  top: 2em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  text-decoration: underline;
+}
+
+  }
+*/

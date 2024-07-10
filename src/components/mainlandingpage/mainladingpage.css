@@ -1,0 +1,13 @@
+.displaycarousel{
+    width: 50em;
+    height: 100em;
+    left: 25em;
+    position:absolute;
+}
+
+.displaysidemenu{
+    position: relative;
+    left: 5em;
+    top: 1em;
+    width: 5em;
+}

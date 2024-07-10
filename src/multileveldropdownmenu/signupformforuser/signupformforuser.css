@@ -1,0 +1,47 @@
+
+
+.signupcontainer{
+   
+     margin-left: 5em;
+}
+
+
+
+
+
+@media (max-width: 480px) {
+  
+   .backgroundImage{
+      position: relative;
+      margin-top: 25em;
+      margin-left: -3.5em;
+   }
+   .signupcontainer{
+     position: relative;
+     width: 10em;
+
+   }
+
+   .firstname{
+       width: 22em;
+       margin-left: -5.3em;
+   }
+   .lastname{
+      width: 22em;
+      margin-left: -5.3em;
+   }
+   .username{
+      width: 22em;
+      margin-left: -5.3em;
+   }
+   .password{
+       margin-left: -5.3em;
+       width: 22em;
+   }
+   .submit{
+      margin-left: -4.6em;
+      width: 1em;
+   }
+  
+  
+}

@@ -1,0 +1,49 @@
+.signupcontainer{
+    top: 6em;
+    position: relative;
+    width: 400px;
+    margin: 0;
+    align-items: center;
+    display:inline-block;
+    margin-left: 40%;
+    
+}
+
+.backgroundImage{
+    height: '850px',
+}
+
+@media screen and (max-width: 480px)
+     {
+    
+      .backgroundImage{
+        
+          position: relative;
+          margin-left: -20em;
+
+      }
+      .signupcontainer{
+       
+        position: relative;
+        margin-left: 40%;
+        
+    }
+    .btn{
+         width: 2em;
+         position: relative;
+         margin-left: -6em;
+    }
+    .d-grid{
+         width: 5em;
+    }
+
+    .signupform
+    {
+         position: relative;
+         
+         margin-left: 10%;
+    }
+
+}
+
+

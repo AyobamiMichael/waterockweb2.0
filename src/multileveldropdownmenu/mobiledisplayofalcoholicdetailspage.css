@@ -1,0 +1,75 @@
+.shop-container {
+    display: none; 
+  }
+  
+  .category-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 45%;
+  }
+  
+  .category-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .shop-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px;
+      overflow-x: auto;
+      overflow-y: auto;
+      position: relative;   
+      height: 100vh;
+    }
+  
+    .category-card {
+      width: 100%;
+    }
+    .category-image{
+        position: relative;
+        height: 50px;
+        width: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shop-container{
+        position: fixed;
+        height: 50vh;
+        overflow-x:auto;
+        
+    }
+  
+    .category-card {
+       height: 10em;
+    }
+  
+    .freshfood-image{
+      position: relative;
+      height: 100px;
+      width: 100px;
+  }
+    .addtocart{
+        background-color: blue;
+        color: white;
+        position: relative;
+        margin-left: 15em;
+        top: -15em;
+    }
+
+    .category-card h2 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+  
+    .category-card p {
+      margin: 5px 0;
+    }
+   
+  }

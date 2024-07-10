@@ -1,0 +1,121 @@
+.main {
+    text-align: center;
+    padding: 20px;
+    top: -30em;
+  }
+  
+  input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+
+  }
+  
+  .product-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .product-card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .product-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .product-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .edit-icon {
+    color: #007bff;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    color: #ff0000;
+    cursor: pointer;
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    .product-card {
+      padding: 10px;
+      margin: 10px;
+      
+    }
+  
+    .product-card h3 {
+      font-size: 1.2rem;
+    }
+  
+    .product-card p {
+      font-size: 0.9rem;
+    }
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .mainforviewingshoppingproducts{
+      position: relative;
+      text-align: center;
+      padding: 20px;
+      overflow-y: scroll;
+      top: 1em;
+    }
+    .product-card {
+      padding: 10px;
+      margin: 1px;
+      height: 7em;
+      
+    }
+    .productcontainer{
+       position: relative;
+       margin: 2em;
+       
+    }
+    .shopdescription{
+       position: relative;
+       text-align: right;
+       margin-top: -4em;
+       font-size: small;
+    }
+    .shoppingproductimage{
+      position: relative;
+      height: 3.5em;
+      width: 5em;
+      margin-top: -11em;
+
+    }
+  
+    .product-card h3 {
+      font-size: 0.7rem;
+      text-align: left;
+      font-weight: bold;
+    }
+  
+    .product-card p {
+      font-size: 0.7rem;
+      margin-top: 1em;
+      text-align: left;
+      font-weight: bold;
+    }
+    .product-actions{
+       position: relative;
+       top: -1.5em;
+    }
+  }
+  
+  
+  

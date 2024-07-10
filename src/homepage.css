@@ -1,0 +1,83 @@
+
+.main {
+  font-family: 'Arial', sans-serif;
+  
+}
+
+.landingpage {
+  position: relative;
+  margin-top: 5em;
+}
+
+.food,
+.phama,
+.bar {
+  width: 430px; /* Adjust the width as needed for default view */
+  height: 350px; /* Adjust the height as needed for default view */
+  position: relative;
+  border: 2px solid #333; /* Example border style */
+  margin: 10px; /* Example margin */
+  transition: transform 0.3s ease-in-out; /* Example transition effect */
+}
+
+.food:hover,
+.phama:hover,
+.bar:hover {
+  transform: scale(1.1); /* Example hover effect */
+}
+
+.mainpagefooter {
+  background-color: #f0f0f0; /* Example background color */
+  padding: 10px; /* Example padding */
+  text-align: center; /* Example text alignment */
+}
+.groceriestext{
+    position: relative;
+    top: -10em;
+}
+
+
+@media screen and (max-device-width: 640px) {
+
+  .navbarforlandingpage{
+      position: relative;
+      top: 30em;
+      
+  }
+  .main {
+      font-family: 'Arial', sans-serif;      
+      
+    }
+    
+    .landingpage {
+      position: relative;
+   
+      
+    }
+    
+    .food,
+    .phama,
+    .bar {
+      width: 320px; /* Adjust the width as needed for default view */
+      height: 155px; /* Adjust the height as needed for default view */
+      position: relative;
+      border: 2px solid #333; /* Example border style */
+      margin: 3px; /* Example margin */
+      transition: transform 0.3s ease-in-out; /* Example transition effect */
+      top: 31em;
+      
+    }
+    
+    .food:hover,
+    .phama:hover,
+    .bar:hover {
+      transform: scale(1.1); /* Example hover effect */
+    }
+    
+    .mainpagefooter {
+      background-color: #f0f0f0; /* Example background color */
+      padding: 10px; /* Example padding */
+      text-align: center; /* Example text alignment */
+    }
+ 
+}
