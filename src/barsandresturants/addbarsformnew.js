@@ -38,7 +38,7 @@ function RegisterBarForm(){
  const [barPhone, setBarPhone] = useState('');
  const [barImage, setBarImageName] = useState('');
  const [businessType, setBusinessType] = useState('');
- 
+ const [barNumberOfViews, setBarNumberOfViews] = useState(0);
 
 
 
