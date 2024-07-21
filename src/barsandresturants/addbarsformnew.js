@@ -109,7 +109,8 @@ const handleImageChange = (e) => {
     formData.append('barPhone', barPhone);
     formData.append('barImage', barImage);
     formData.append('barManagerUserName',barManagerUserName);
-    formData.append('businessType', businessType); // Yet to be add to the server and DB
+    formData.append('businessType', businessType); 
+    formData.append('barNumberOfViews', barNumberOfViews);
 
     if(!/^0\d{10}$/.test(barPhone)){
         alert('Invalid number');
