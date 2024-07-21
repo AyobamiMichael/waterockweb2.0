@@ -38,6 +38,7 @@ function RegisterBarForm(){
  const [barPhone, setBarPhone] = useState('');
  const [barImage, setBarImageName] = useState('');
  const [businessType, setBusinessType] = useState('');
+ const [barNumberOfViews, setBarNumberOfViews] = useState(0);
  
 
 
@@ -109,7 +110,8 @@ const handleImageChange = (e) => {
     formData.append('barPhone', barPhone);
     formData.append('barImage', barImage);
     formData.append('barManagerUserName',barManagerUserName);
-    formData.append('businessType', businessType); // Yet to be add to the server and DB
+    formData.append('businessType', businessType);
+    formData.append('barNumberOfViews', barNumberOfViews);
 
     if(!/^0\d{10}$/.test(barPhone)){
         alert('Invalid number');
@@ -232,3 +234,5 @@ const handleImageChange = (e) => {
 
 
 export default RegisterBarForm;
+
+// https://waterockapi.wegotam.com/registerbars
