@@ -139,6 +139,7 @@ const handleImageChange = (e) => {
         setBarPhone('');
         setBarImageName('');
         setBarUsername('');
+        setBusinessType('');
         
       } else {
         alert("Registration failed");
