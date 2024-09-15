@@ -6,14 +6,14 @@
 
 .landingpage {
   position: relative;
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 .food,
 .phama,
 .bar {
-  width: 430px; /* Adjust the width as needed for default view */
-  height: 350px; /* Adjust the height as needed for default view */
+  width: 400px; /* Adjust the width as needed for default view */
+  height: 370px; /* Adjust the height as needed for default view */
   position: relative;
   border: 2px solid #333; /* Example border style */
   margin: 10px; /* Example margin */
