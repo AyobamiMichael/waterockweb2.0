@@ -3,6 +3,13 @@
     position: relative;
     top: 1em;
 }
+.password-toggle-icon{
+   position: relative;
+   left: -17em;
+   top: -2em;
+}
+
+
 
 
 @media (max-width: 480px) {
@@ -13,23 +20,31 @@
 
     .logincontainer{
       position: relative;
-      width: 10em;
+      width: 25em;
       position: relative;
       margin-top: 30em;
-      margin-left: -3em;
+      margin-left: 2em;
  
     }
     .usernamesignin{
-      width: 22em;
-      margin-left: -3em;
+      width: 10em;
+      margin-left: -5em;
+      position: relative;
     }
     .passwordsignin{
-      width: 22em;
-      margin-left: -3em;
+      width: 17em;
+      margin-left: 2em;
+      margin-top: 2.5em;
        
     }
     .submitsignin{
       margin-left: -3em;
     }
+
+    .password-toggle-icon{
+      position: relative;
+      left: -12em;
+      top: -1.5em;
+   }
    
  }

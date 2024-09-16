@@ -44,5 +44,9 @@
 
   }
  
- 
+ .password-toggle-iconsignup{
+   position: relative;
+   left: 5em;
+   top: -0.1em;
+ }
 }
