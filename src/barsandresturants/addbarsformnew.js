@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './addbarsform.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import BarsAndResturantsNavBar from './barnavbar';
+import { Rating } from '@mui/material';
 
 
 
@@ -39,6 +40,8 @@ function RegisterBarForm(){
  const [barImage, setBarImageName] = useState('');
  const [businessType, setBusinessType] = useState('');
  const [barNumberOfViews, setBarNumberOfViews] = useState(0);
+ const [customerReview, setCustomerReview] = useState(['']);
+ const [customerRating, setCustomerRating] = useState(['']);
 
 
 
@@ -111,12 +114,15 @@ const handleImageChange = (e) => {
     formData.append('barManagerUserName',barManagerUserName);
     formData.append('businessType', businessType); 
     formData.append('barNumberOfViews', barNumberOfViews);
+    formData.append('customerReview', customerReview);
+    formData.append('rating', customerRating);
+
 
     if(!/^0\d{10}$/.test(barPhone)){
         alert('Invalid number');
         return;      
     }
-    
+    // https://waterockapi.wegotam.com/registerbars
     try {
       const response = await fetch("https://waterockapi.wegotam.com/registerbars", {
         method: "POST",
