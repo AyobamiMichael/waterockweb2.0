@@ -91,6 +91,7 @@ const AddBarProductsForm = () => {
   'Swallow',
   'Ukwa',
   'Okpa',
+  'Palm Wine',
   'Others'
 ]
 
