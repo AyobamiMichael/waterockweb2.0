@@ -139,7 +139,9 @@ export default class SignInBarManager extends Component {
               </button>
             </div>
 
-            <p className="forgot-password text-right">
+            <p className="auth-links">
+              <a href="/forgotpasswordbarmanager">Forgot Password?</a>
+              <br />
               <a href="/signupbarmanager">Sign Up</a>
             </p>
           </form>

@@ -54,9 +54,10 @@ import RegisterBarForm from './barsandresturants/addbarsformnew';
 import NewAddBarProductsForm from './barsandresturants/newbarproductsform';
 import EditBarProductsGrid from './barsandresturants/editbarsproducts';
 import ViewDeleteBar from './barsandresturants/viewdeletebars';
+import ForgotPasswordBarManager from './barsandresturants/forgotpasswordpage';
 
  // IMPLEMENT ALL ROUTES HERE
- 
+
 
 function App(){
     return(
@@ -106,6 +107,8 @@ function App(){
          <Route exact path='/addbarform' element={<RegisterBarForm/>}/>
          <Route exact path='/editbarproducts' element={<EditBarProductsGrid/>}/>
          <Route exact path='/viewdeletebar' element={<ViewDeleteBar/>}/>
+         <Route exact path='/forgotpasswordbarmanager' element={<ForgotPasswordBarManager/>}/>
+       
 
          
          

@@ -10,6 +10,20 @@
 }
 
 
+.auth-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.auth-links a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
 
 
 @media (max-width: 480px) {
