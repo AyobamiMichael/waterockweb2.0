@@ -113,7 +113,7 @@ export default class SignInBarManager extends Component {
                 required
               />
               <span
-                className="password-toggle-icon"
+                className="signinpassword-toggle-icon"
                 onClick={this.togglePasswordVisibility}
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}

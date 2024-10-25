@@ -28,9 +28,9 @@ export default class ForgotPasswordBarManager extends Component {
     }
 
     console.log(uname, newPassword);
-     // https://waterockapi.wegotam.com/updatepassword
+     
     try {
-      fetch("http://localhost:4000/updatepassword", {
+      fetch("https://waterockapi.wegotam.com/updatepassword", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -92,13 +92,17 @@ export default class ForgotPasswordBarManager extends Component {
                 onChange={(e) => this.setState({ newPassword: e.target.value })}
                 required
               />
-              <span
+             
+            </div>
+           
+            <span
                 className="password-toggle-icon"
                 onClick={this.togglePasswordVisibility}
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
-            </div>
+            
+           
 
             <div className="mb-3 password-container">
               <input
