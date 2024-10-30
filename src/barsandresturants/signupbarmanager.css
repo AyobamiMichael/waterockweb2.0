@@ -35,7 +35,7 @@
      margin-left: -5.3em;
   }
   .password{
-      margin-left: -5.3em;
+      margin-left: -6.5em;
       width: 22em;
   }
   .submit{
@@ -46,7 +46,7 @@
  
  .password-toggle-iconsignup{
    position: relative;
-   left: 5em;
+   left: 2em;
    top: -0.1em;
  }
 }

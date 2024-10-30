@@ -93,6 +93,7 @@ export default class SignUpBarManager extends Component {
                 />
               </div>
 
+              
               <div className="mb-3 password-container">
                 <input
                   type={showPassword ? "text" : "password"} // Toggle input type

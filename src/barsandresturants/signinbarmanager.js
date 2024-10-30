@@ -93,7 +93,8 @@ export default class SignInBarManager extends Component {
         <div className="logincontainer">
           <form onSubmit={this.handleSubmit}>
             <h3>Sign In</h3>
-
+            
+            <div className="signinusernametextbox">
             <div className="mb-3 username-container">
               <input
                 type="text"
@@ -103,7 +104,9 @@ export default class SignInBarManager extends Component {
                 required
               />
             </div>
-
+            </div>
+              
+           <div className="signinpasswordtextbox">
             <div className="mb-3 password-container">
               <input
                 type={showPassword ? "text" : "password"} // Toggle input type based on state
@@ -112,14 +115,16 @@ export default class SignInBarManager extends Component {
                 onChange={(e) => this.setState({ password: e.target.value })}
                 required
               />
-              <span
+            
+            </div>
+            </div>
+
+            <span
                 className="signinpassword-toggle-icon"
                 onClick={this.togglePasswordVisibility}
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
-            </div>
-
             <div className="mb-3">
               <div className="custom-control custom-checkbox">
                 <input
@@ -133,12 +138,13 @@ export default class SignInBarManager extends Component {
               </div>
             </div>
 
+            <div className="signinsubmitbutton">
             <div className="d-grid">
               <button type="submit" className="btn btn-primary submitsignin">
                 Submit
               </button>
             </div>
-
+            </div>
             <p className="auth-links">
               <a href="/forgotpasswordbarmanager">Forgot Password?</a>
               <br />

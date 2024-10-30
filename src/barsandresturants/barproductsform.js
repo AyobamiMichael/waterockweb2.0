@@ -247,6 +247,7 @@ const AddBarProductsForm = () => {
         style={{ height: '200px' }}
          />
          
+         <div className='pricetextbox'>
         <div className="form-group"> 
         <input
           type="text"
@@ -256,6 +257,7 @@ const AddBarProductsForm = () => {
           required='true' 
           placeholder="Price"    
         />
+      </div>
       </div>
       </div>
       {/* Submit Buttons */}

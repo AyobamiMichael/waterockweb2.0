@@ -23,7 +23,11 @@
   
  
   @media (max-width: 480px) {
- 
+     
+    .pricetextbox{
+        position: relative;
+        top: -3em;
+    }
     
     .form-container {
       display: flex;

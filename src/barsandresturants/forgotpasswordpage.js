@@ -74,6 +74,7 @@ export default class ForgotPasswordBarManager extends Component {
           <form onSubmit={this.handleSubmit}>
             <h3>Reset Password</h3>
 
+            <div className="forgotpasswordusername">
             <div className="mb-3 username-container">
               <input
                 type="text"
@@ -83,7 +84,9 @@ export default class ForgotPasswordBarManager extends Component {
                 required
               />
             </div>
+            </div>
 
+            <div className="forgotpasswordpassword">
             <div className="mb-3 password-container">
               <input
                 type={showPassword ? "text" : "password"} // Toggle input type based on state
@@ -94,16 +97,19 @@ export default class ForgotPasswordBarManager extends Component {
               />
              
             </div>
+            </div>
            
+             <div className="forgotpasswordtoggle">
             <span
                 className="password-toggle-icon"
                 onClick={this.togglePasswordVisibility}
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
-            
-           
-
+              
+              </div>
+              
+              <div className="confirmnewpassword">
             <div className="mb-3 password-container">
               <input
                 type={showPassword ? "text" : "password"}
@@ -114,10 +120,14 @@ export default class ForgotPasswordBarManager extends Component {
               />
             </div>
 
+            </div>
+            
+            <div className="submitnewpassword">
             <div className="d-grid">
               <button type="submit" className="btn btn-primary submitforgotpassword">
                 Submit
               </button>
+            </div>
             </div>
 
             {message && <p className="forgot-password-message">{message}</p>}
