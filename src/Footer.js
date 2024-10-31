@@ -12,13 +12,13 @@ const Footer = () => {
           <h3>NEED HELP?</h3>
           <ul>
             <li>
-              <a href="#">Chat with us</a>
+              <a href="/footercontactus">Chat with us</a>
             </li>
             <li>
               <a href="#">Help Center</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/footercontactus">Contact Us</a>
             </li>
           </ul>
         </div>

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const ContactUs = () => {
+const FooterContactUs = () => {
   return (
     <div style={styles.contactContainer}>
       <h2 style={styles.header}>Contact Us</h2>
@@ -10,20 +10,20 @@ const ContactUs = () => {
 
       <div style={styles.contactInfo}>
         <h3 style={styles.subHeader}>Phone Numbers</h3>
-        <p><strong>Customer Support:</strong> +23480000000</p>
-        <p><strong>Sales Inquiries:</strong> +234800000000</p>
+        <p><strong>Customer Support:</strong> +1 (123) 456-7890</p>
+        <p><strong>Sales Inquiries:</strong> +1 (987) 654-3210</p>
 
         <h3 style={styles.subHeader}>Email Addresses</h3>
         <p>
           <strong>General Inquiries:</strong>{" "}
           <a href="mailto:info@example.com" style={styles.link}>
-            info@waterock.com
+            info@example.com
           </a>
         </p>
         <p>
           <strong>Support:</strong>{" "}
           <a href="mailto:support@example.com" style={styles.link}>
-		  info@waterock.com
+            support@example.com
           </a>
         </p>
       </div>
@@ -68,4 +68,4 @@ const styles = {
 };
 
 // Export the component
-export default ContactUs;
+export default  FooterContactUs;
