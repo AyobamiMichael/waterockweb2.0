@@ -10,20 +10,20 @@ const FooterContactUs = () => {
 
       <div style={styles.contactInfo}>
         <h3 style={styles.subHeader}>Phone Numbers</h3>
-        <p><strong>Customer Support:</strong> +1 (123) 456-7890</p>
-        <p><strong>Sales Inquiries:</strong> +1 (987) 654-3210</p>
+        <p><strong>Customer Support:</strong> +2348000000</p>
+        <p><strong>Sales Inquiries:</strong>  +2348000000</p>
 
         <h3 style={styles.subHeader}>Email Addresses</h3>
         <p>
           <strong>General Inquiries:</strong>{" "}
           <a href="mailto:info@example.com" style={styles.link}>
-            info@example.com
+            info@waterock.com
           </a>
         </p>
         <p>
           <strong>Support:</strong>{" "}
           <a href="mailto:support@example.com" style={styles.link}>
-            support@example.com
+            support@waterock.com
           </a>
         </p>
       </div>
