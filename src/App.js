@@ -56,6 +56,9 @@ import EditBarProductsGrid from './barsandresturants/editbarsproducts';
 import ViewDeleteBar from './barsandresturants/viewdeletebars';
 import ForgotPasswordBarManager from './barsandresturants/forgotpasswordpage';
  import FooterContactUs from './footercontactUs';
+ import AdminLogin from './barsandresturants/adminpage';
+ import ForgotPasswordAdmin from './barsandresturants/forgotpasswordadmin';
+ import CustomerCareSubmission from './barsandresturants/customercaredetailspage';
 
  // IMPLEMENT ALL ROUTES HERE
 
@@ -113,9 +116,9 @@ function App(){
          <Route exact path='/footercontactus' element={<   FooterContactUs
         />}/>
        
-       
-
-         
+         <Route exact path='/admin'   element={< AdminLogin/>}/>
+         <Route exact path='/forgotpasswordadmin'   element={< ForgotPasswordAdmin/>}/>
+         <Route exact path='/customercaredetailspage' element={<CustomerCareSubmission/>}/>
          
         
       </Routes>
@@ -125,76 +128,3 @@ function App(){
 }
 
 export default App;
-/*
-
-function App() {
-  const loggedIn = window.localStorage.getItem("isLoggedIn");
-  console.log(loggedIn);
-  
-  return (
-    <div className='backgroundImage' style={{backgroundImage: `url(${backgroundImg})`,
-     height: '850px',
-     
-     }}>
-    <div className="pharma-App">
-
-       
-     <Router>
-  
-     <div className="container">
-     <header className="header">
-       <Link className="navbar-brand" to={'/'}>
-        <h1>WaterRock</h1> 
-       </Link>
-       </header>
-     </div>
-       
-   
-       <Routes>
-    
-       <Route exact path="*" element={<Searchdrugs />} />
-       <Route path="/sign-in" element={<Login />} />
-       <Route path="/sign-up" element={<SignUp />} />
-       <Route path="/registerpharmacy" element={<RegisterPharmacy />} />
-       <Route path="/updatepharmacy" element={<UpdatePharmacy />} />
-
-       <Route exact path="/viewdrugs" element={<ViewDrugs />} />
-       <Route path="/registerdrug" element={<RegisterDrug />} />
-
-       <Route path="/registerproduct" element={<RegisterProduct />} />
-       
-
-       <Route path="/login" element={<Login />} />
-       
-       <Route path="/logout" element={<Logoutuser />} />
-       <Route path="/viewalldrugs" element={<ViewAllDrugs />} />
-       <Route path="/editproduct" element={<EditDrug />} />
-        
-       <Route path="/userdetails" element={<UserDetails />} />
-       <Route path="/userdata" element={<UserData />} />
-       
-     
-      
-       </Routes>       
-     </Router>
-    
-    </div>
-    </div>
-  
-   
-  );
-}
-
-
-export default App;
-
-//  <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-
-//  <Route path="/" exact component={ loggedIn ? <ViewDrugs /> : Login} />
-
-
-
-
-// Remember Searchdrugs
-
-*/
