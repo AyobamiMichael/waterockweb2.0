@@ -1,0 +1,59 @@
+/* Container for the Vendors box */
+.vendors-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh; /* Full viewport height */
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  /* Styling for the Vendors box */
+  .vendors-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    background: linear-gradient(135deg, #28a745, #34d058); /* Gradient green */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+    .vendors-box {
+      width: 250px;
+      height: 80px;
+      font-size: 20px;
+    }
+
+    .vendors-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh; /* Full viewport height */
+      background-color: #f9f9f9; /* Light background for contrast */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .vendors-box {
+      width: 200px;
+      height: 70px;
+      font-size: 18px;
+    }
+    .vendors-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vh; /* Full viewport height */
+      background-color: #f9f9f9; /* Light background for contrast */
+    }
+  }
+  

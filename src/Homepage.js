@@ -10,6 +10,10 @@ import Navbar from './homepagenavbar/navbar';
 import Footer from './Footer';
 import shopGroceriesImage from './images/shopgroceries.jpg';
 import barImage from './images/barsresturant1.jpg';
+import PhraseDisplay from './barsandresturants/phrasedisplay';
+import DownloadButtons from './barsandresturants/downloadbuttons';
+import ImageSlider  from './barsandresturants/ImageSlider';
+import VendorsBox from './barsandresturants/VendorBox';
 
 
 
@@ -18,8 +22,13 @@ const Homepage =()=> {
            
       <div className='main'>
           <div className='navbarforlandingpage'>   <Navbar /></div>
-     
-        
+          <div className='phrasedisplatpage'>< PhraseDisplay/> </div>
+           <div className='downloadbuttonspage'> < DownloadButtons /></div>
+           <div className='imagesliderpage'> < ImageSlider /></div>
+
+
+           <div className='vendors'><VendorsBox /></div>
+           
             <div className='landingpage'>
             <Link to='/signupbarmanager'>
                   <img src={barImage}  className='bar'/>

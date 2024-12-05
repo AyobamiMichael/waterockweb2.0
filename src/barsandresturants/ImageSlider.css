@@ -1,0 +1,32 @@
+/* Slider container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+    background-color: #000; /* Fallback background */
+  }
+  
+  /* Image styling */
+  .slider-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+    .slider-container {
+      height: 400px; /* Adjust height for tablets */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .slider-container {
+      height: 300px; /* Adjust height for mobile phones */
+    }
+  }
+  
